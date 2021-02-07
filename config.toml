@@ -1,0 +1,48 @@
+baseURL = "https://komikku.febvre.info/"
+languageCode = "en-us"
+title = "Komikku"
+theme = "ada-project-showcase"
+copyright = "Valéry Febvre"
+
+# It is recommended to disable these built-in hugo types, as they don't do
+# anything with this theme and don't have a use for the scope of this theme
+disableKinds = ["RSS", "section", "categories", "tags"]
+
+[params]
+    # This will show up along in the title tag in head, after the title, and
+    # in the splash if no subtitle is specified there
+    subtitle = "A manga, comics and BDs reader for GNOME"
+
+    # These links will appear in the Header
+    links = [
+        ["Features", "/#features"],
+        ["Gallery", "/#gallery"],
+        ["Install", "/#install"],
+        ["Support", "/#support"],
+    ]
+
+    # This logo will appear in the header, left of the title
+    logo = "/komikku.svg"
+    favicon = "/favicon.png"
+
+    # if both license and licenseLink are populated, the content license will
+    # be shown in the footer
+    license = "CC-BY-SA-4.0"
+    licenseLink = "https://creativecommons.org/licenses/by-sa/4.0/"
+
+    # customize the color of the header. value can be one of: blue, red,
+    # orange, yellow, green, purple (default is blue)
+    headerColor = "red"
+    # make the header fixed. if splash is enabled and
+    # fixedHeaderInitiallyTransparent is false or unset, activating this will
+    # force the header to have a background color, despite headerColor being
+    # unset. this is to avoid a weird appearance with a fixed transparent header
+    fixedHeader = true
+    # the header will be transparent when the view is at the beginning, meaning
+    # when the vertical scroll position is 0
+    fixedHeaderInitiallyTransparent = true
+
+    # redirect to baseURL if current URL host doesn't match
+    # useful if deploying in gitlab pages with custom domain and don't want
+    # the username.gitlab.io/website url to persist
+    forceRedirect = true

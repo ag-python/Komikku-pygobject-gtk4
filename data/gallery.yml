@@ -1,0 +1,8 @@
+enabled: true
+title: Gallery
+pictures:
+  - screenshot-reader.png
+  - screenshot-preferences.png
+  - screenshot-explorer-servers.png
+  - screenshot-card-info.png
+  - screenshot-card-chapters.png

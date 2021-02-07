@@ -1,0 +1,3 @@
+[submodule "themes/ada-project-showcase"]
+	path = themes/ada-project-showcase
+	url = https://gitlab.com/gabmus/hugo-ada-project-showcase.git

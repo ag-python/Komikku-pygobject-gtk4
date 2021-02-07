@@ -1,0 +1,8 @@
+- type: markdown
+  data: description
+- type: gallery
+  data: gallery
+- type: downloads
+  data: install
+- type: markdown
+  data: hack_support

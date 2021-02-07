@@ -1,0 +1,15 @@
+enabled: true
+# this will show up on top of the section as a h1
+title: Install
+downloads:
+  - distro: Flathub
+    logo:
+    button_title: Download on Flathub
+    button_link: https://flathub.org/apps/details/info.febvre.Komikku
+    button_color: purple
+    commands: |
+      flatpak --user install info.febvre.Komikku
+  - distro: Source code
+    icon: gitlab
+    button_title: Browse the GitLab repository
+    button_link: https://gitlab.com/valos/Komikku
