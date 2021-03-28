@@ -1,4 +1,9 @@
 .venv
 _build
+__pycache__
+data/ui
 flatpak
+komikku
+po
+tests
 untracked

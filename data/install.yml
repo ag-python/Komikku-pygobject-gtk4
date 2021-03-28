@@ -3,12 +3,15 @@ enabled: true
 title: Install
 downloads:
   - distro: Flathub
-    logo:
     button_title: Download on Flathub
     button_link: https://flathub.org/apps/details/info.febvre.Komikku
     button_color: purple
     commands: |
       flatpak --user install info.febvre.Komikku
+  - distro: Native package
+    logo: https://repology.org/badge/vertical-allrepos/komikku.svg
+    button_title: See distributions providing a native package
+    button_link: https://repology.org/project/komikku/versions
   - distro: Source code
     icon: gitlab
     button_title: Browse the GitLab repository
