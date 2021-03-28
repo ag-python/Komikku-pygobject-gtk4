@@ -1,8 +1,11 @@
 enabled: true
 title: Gallery
 pictures:
-  - screenshot-reader.png
+  - screenshot-library-categories.png
+  - screenshot-categories-editor.png
   - screenshot-preferences.png
   - screenshot-explorer-servers.png
   - screenshot-card-info.png
+  - screenshot-card-categories.png
   - screenshot-card-chapters.png
+  - screenshot-reader.png
