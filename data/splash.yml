@@ -1,6 +1,6 @@
 enabled: true
 # icon is a url for an optional icon that will be shown to the left of the title
-icon: /komikku.svg
+icon: komikku.svg
 title: Komikku
 subtitle: A manga, comics and BDs reader for GNOME
 # background is a url for an optional background image
@@ -16,7 +16,7 @@ gradient:
 # picture is a url for an optional picture that will be shown to the right of
 # the title. it is recommended to use a screenshot of your project here
 # or alternatively a nice vector graphic
-picture: /screenshot-library.png
+picture: screenshot-library.png
 # these buttons represent links that will be shown under the title
 # they represent quick actions you want your user to take, like Install or
 # Discover features

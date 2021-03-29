@@ -1,3 +1,4 @@
+#baseURL = "https://komikku.febvre.info"
 baseURL = "https://valos.gitlab.io/Komikku"
 languageCode = "en-us"
 title = "Komikku"
@@ -15,15 +16,15 @@ disableKinds = ["RSS", "section", "categories", "tags"]
 
     # These links will appear in the Header
     links = [
-        ["Features", "/#features"],
-        ["Gallery", "/#gallery"],
-        ["Install", "/#install"],
-        ["Support", "/#support"],
+        ["Features", "#features"],
+        ["Gallery", "#gallery"],
+        ["Install", "#install"],
+        ["Support", "#support"],
     ]
 
     # This logo will appear in the header, left of the title
-    logo = "/komikku.svg"
-    favicon = "/favicon.png"
+    logo = "komikku.svg"
+    favicon = "favicon.png"
 
     # if both license and licenseLink are populated, the content license will
     # be shown in the footer
@@ -45,4 +46,5 @@ disableKinds = ["RSS", "section", "categories", "tags"]
     # redirect to baseURL if current URL host doesn't match
     # useful if deploying in gitlab pages with custom domain and don't want
     # the username.gitlab.io/website url to persist
+    #forceRedirect = true
     forceRedirect = false
