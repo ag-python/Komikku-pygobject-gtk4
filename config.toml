@@ -1,4 +1,4 @@
-baseURL = "https://komikku.febvre.info/"
+baseURL = "https://valos.gitlab.io/Komikku"
 languageCode = "en-us"
 title = "Komikku"
 theme = "ada-project-showcase"
@@ -45,4 +45,4 @@ disableKinds = ["RSS", "section", "categories", "tags"]
     # redirect to baseURL if current URL host doesn't match
     # useful if deploying in gitlab pages with custom domain and don't want
     # the username.gitlab.io/website url to persist
-    forceRedirect = true
+    forceRedirect = false

@@ -1,6 +1,7 @@
 .venv
 _build
 __pycache__
+.pytest_cache
 data/ui
 flatpak
 komikku
