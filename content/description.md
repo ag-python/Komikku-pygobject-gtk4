@@ -1,7 +1,7 @@
 # Features
 
 - Online reading from servers
-- Offline reading of downloaded mangas/comics/BDs
+- Offline reading of downloaded manga/comics/BDs
 - Categories to organize your library
 - Multiple reading modes:
     - Right to left

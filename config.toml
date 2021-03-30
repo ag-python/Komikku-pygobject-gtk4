@@ -12,7 +12,7 @@ disableKinds = ["RSS", "section", "categories", "tags"]
 [params]
     # This will show up along in the title tag in head, after the title, and
     # in the splash if no subtitle is specified there
-    subtitle = "A manga, comics and BDs reader for GNOME"
+    subtitle = "A manga, comic and BD reader for GNOME"
 
     # These links will appear in the Header
     links = [
