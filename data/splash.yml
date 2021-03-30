@@ -2,7 +2,7 @@ enabled: true
 # icon is a url for an optional icon that will be shown to the left of the title
 icon: komikku.svg
 title: Komikku
-subtitle: A manga, comics and BDs reader for GNOME
+subtitle: A manga, comic and BD reader for GNOME
 # background is a url for an optional background image
 # if left blank, a customizable gradient will be used instead
 background:
