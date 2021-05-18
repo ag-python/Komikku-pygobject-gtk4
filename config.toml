@@ -1,5 +1,4 @@
-#baseURL = "https://komikku.febvre.info"
-baseURL = "https://valos.gitlab.io/Komikku"
+baseURL = "https://valos.gitlab.io/Komikku/"
 languageCode = "en-us"
 title = "Komikku"
 theme = "ada-project-showcase"
