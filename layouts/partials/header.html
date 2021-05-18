@@ -1,0 +1,62 @@
+<!--
+    TODO: make the transparent version an alternate style that only gets
+    enabled in the home page
+-->
+<header class="
+        {{ if .Site.Params.headerColor }}
+            {{ .Site.Params.headerColor }}
+        {{ else if and .Site.Data.splash .Site.Data.splash.enabled (not .Site.Params.fixedHeader) }}
+            transparent
+        {{ end }}
+        {{ if .Site.Params.fixedHeader }}
+            fixed
+        {{ end }}
+    ">
+    <div class="center">
+        <a href="{{ .Site.BaseURL }}">
+            <img src='{{ .Site.Params.Logo | default "/logo.svg" }}'>
+            <h1 style="font-size: 1.4rem; line-height: 1.3rem;">
+                {{ .Site.Title | default "Ada Project Showcase" }}
+            </h1>
+        </a>
+        <div class="spacer-end"></div>
+        <div class="overflow">
+            <button class="btn overflow-btn"
+                onclick="document.getElementById('header-overflow-menu').classList.toggle('open')">
+            </button>
+            <ul id="header-overflow-menu" class="overflow-content">
+                {{ range .Site.Params.links }}
+                    <li><a href="{{ index . 1 }}">
+                        {{ index . 0 }}
+                    </a></li>
+                {{ end }}
+            </ul>
+        </div>
+        <button class="btn" title="Toggle dark mode"
+            onclick="darktoggle()">
+            <svg width="16" height="16">
+                <path d="M6.81 1.102A7 7 0 0 0 1 8a7 7 0 0 0 7 7 7 7 0 0 0 4.594-1.729A8.797 8.797 0 0 1 6 4.766a8.797 8.797 0 0 1 .81-3.664z" fill="#fff"></path>
+            </svg>
+        </button>
+    </div>
+</header>
+{{ if and .Site.Params.fixedHeaderInitiallyTransparent .Site.Params.fixedHeader }}
+    <script>
+        const debounce = (fn) => {
+          let frame;
+          return (...params) => {
+            if (frame) {
+              cancelAnimationFrame(frame);
+            }
+            frame = requestAnimationFrame(() => {
+              fn(...params);
+            });
+          }
+        };
+        const storeScroll = () => {
+          document.documentElement.dataset.scroll = window.scrollY;
+        }
+        document.addEventListener('scroll', debounce(storeScroll), { passive: true });
+        storeScroll();
+    </script>
+{{ end }}
