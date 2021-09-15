@@ -116,7 +116,7 @@ class Preferences(Handy.Deck):
             self.subtitle_label.show()
 
     def on_page_numbering_changed(self, switch_button, _gparam):
-        self.settings.page_numbering = switch_button.get_active()
+        self.settings.page_numbering = not switch_button.get_active()
 
     def on_reading_mode_changed(self, row, param):
         index = row.get_selected_index()
@@ -246,7 +246,7 @@ class Preferences(Handy.Deck):
         self.borders_crop_switch.connect('notify::active', self.on_borders_crop_changed)
 
         # Page numbering
-        self.page_numbering_switch.set_active(self.settings.page_numbering)
+        self.page_numbering_switch.set_active(not self.settings.page_numbering)
         self.page_numbering_switch.connect('notify::active', self.on_page_numbering_changed)
 
         # Full screen

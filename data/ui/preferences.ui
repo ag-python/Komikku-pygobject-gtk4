@@ -274,7 +274,7 @@
                         <property name="can_focus">True</property>
                         <property name="title" translatable="yes">Page Numbering</property>
                         <property name="activatable_widget">page_numbering_switch</property>
-                        <property name="subtitle" translatable="yes">Show the page numbering at the bottom of the screen while reading</property>
+                        <property name="subtitle" translatable="yes">Hide the page numbering at the bottom of the screen while reading</property>
                         <child>
                           <object class="GtkSwitch" id="page_numbering_switch">
                             <property name="visible">True</property>
