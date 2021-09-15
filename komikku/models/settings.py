@@ -72,6 +72,14 @@ class Settings(Gio.Settings):
         self.set_boolean('borders-crop', state)
 
     @property
+    def show_page_numbering(self):
+        return self.get_boolean('show-page-numbering')
+
+    @show_page_numbering.setter
+    def show_page_numbering(self, state):
+        self.set_boolean('show-page-numbering', state)
+
+    @property
     def credentials_storage_plaintext_fallback(self):
         return self.get_boolean('credentials-storage-plaintext-fallback')
 

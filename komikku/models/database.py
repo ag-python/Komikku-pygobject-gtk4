@@ -123,6 +123,7 @@ def init_db():
         status text,
         background_color text,
         borders_crop integer,
+        show_page_numbering integer,
         reading_mode text,
         scaling text,
         sort_order text,
@@ -251,6 +252,8 @@ def init_db():
             res = True
             for new, old in ids_mapping.items():
                 res &= execute_sql(db_conn, f"UPDATE mangas SET server_id = '{new}' WHERE server_id = '{old}';")
+
+            res &= execute_sql(db_conn, 'ALTER TABLE mangas ADD COLUMN show_page_numbering integer;')
 
             if res:
                 db_conn.execute('PRAGMA user_version = {0}'.format(8))
