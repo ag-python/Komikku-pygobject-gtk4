@@ -23,7 +23,7 @@ from komikku.utils import get_data_dir
 
 logger = logging.getLogger('komikku')
 
-VERSION = 8
+VERSION = 9
 
 
 def adapt_json(data):
@@ -123,7 +123,7 @@ def init_db():
         status text,
         background_color text,
         borders_crop integer,
-        show_page_numbering integer,
+        page_numbering integer,
         reading_mode text,
         scaling text,
         sort_order text,
@@ -253,10 +253,13 @@ def init_db():
             for new, old in ids_mapping.items():
                 res &= execute_sql(db_conn, f"UPDATE mangas SET server_id = '{new}' WHERE server_id = '{old}';")
 
-            res &= execute_sql(db_conn, 'ALTER TABLE mangas ADD COLUMN show_page_numbering integer;')
-
             if res:
                 db_conn.execute('PRAGMA user_version = {0}'.format(8))
+
+        if 0 < db_version <= 8:
+            # Version 0.32.0
+            if execute_sql(db_conn, 'ALTER TABLE mangas ADD COLUMN page_numbering integer;'):
+                db_conn.execute('PRAGMA user_version = {0}'.format(9))
 
         print('DB version', db_conn.execute('PRAGMA user_version').fetchone()[0])
 

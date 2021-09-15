@@ -42,7 +42,7 @@ class Preferences(Handy.Deck):
     scaling_row = Gtk.Template.Child('scaling_row')
     background_color_row = Gtk.Template.Child('background_color_row')
     borders_crop_switch = Gtk.Template.Child('borders_crop_switch')
-    show_page_numbering_switch = Gtk.Template.Child('show_page_numbering_switch')
+    page_numbering_switch = Gtk.Template.Child('page_numbering_switch')
     fullscreen_switch = Gtk.Template.Child('fullscreen_switch')
 
     credentials_storage_plaintext_fallback_switch = Gtk.Template.Child('credentials_storage_plaintext_fallback_switch')
@@ -76,9 +76,6 @@ class Preferences(Handy.Deck):
 
     def on_borders_crop_changed(self, switch_button, _gparam):
         self.settings.borders_crop = switch_button.get_active()
-
-    def on_show_page_numbering_changed(self, switch_button, _gparam):
-        self.settings.show_page_numbering = switch_button.get_active()
 
     def on_credentials_storage_plaintext_fallback_changed(self, switch_button, _gparam):
         self.settings.credentials_storage_plaintext_fallback = switch_button.get_active()
@@ -117,6 +114,9 @@ class Preferences(Handy.Deck):
             self.subtitle_label.hide()
         else:
             self.subtitle_label.show()
+
+    def on_page_numbering_changed(self, switch_button, _gparam):
+        self.settings.page_numbering = switch_button.get_active()
 
     def on_reading_mode_changed(self, row, param):
         index = row.get_selected_index()
@@ -245,9 +245,9 @@ class Preferences(Handy.Deck):
         self.borders_crop_switch.set_active(self.settings.borders_crop)
         self.borders_crop_switch.connect('notify::active', self.on_borders_crop_changed)
 
-        # Show page numbering
-        self.show_page_numbering_switch.set_active(self.settings.show_page_numbering)
-        self.show_page_numbering_switch.connect('notify::active', self.on_show_page_numbering_changed)
+        # Page numbering
+        self.page_numbering_switch.set_active(self.settings.page_numbering)
+        self.page_numbering_switch.connect('notify::active', self.on_page_numbering_changed)
 
         # Full screen
         self.fullscreen_switch.set_active(self.settings.fullscreen)
