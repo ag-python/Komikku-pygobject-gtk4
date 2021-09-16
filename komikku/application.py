@@ -425,7 +425,7 @@ class ApplicationWindow(Handy.ApplicationWindow):
             about_dialog.hide()
 
     def on_application_quit(self, window, event):
-        def quit():
+        def do_quit():
             self.save_window_size()
             backup_db()
 
@@ -440,7 +440,7 @@ class ApplicationWindow(Handy.ApplicationWindow):
                     time.sleep(0.1)
                     continue
 
-                quit()
+                do_quit()
 
             message = [
                 _('Are you sure you want to quit?'),
@@ -458,7 +458,7 @@ class ApplicationWindow(Handy.ApplicationWindow):
 
             return
 
-        quit()
+        do_quit()
 
     def on_headerbar_toggle(self, *args):
         if self.page == 'reader' and self.reader.pager:
@@ -481,9 +481,9 @@ class ApplicationWindow(Handy.ApplicationWindow):
         return Gdk.EVENT_PROPAGATE
 
     def on_left_button_clicked(self, action_or_button=None, _param=None):
-        if type(action_or_button) == Gio.SimpleAction:
+        if type(action_or_button) is Gio.SimpleAction:
             source = 'shortcut'
-        elif type(action_or_button) == Gtk.Button:
+        elif type(action_or_button) is Gtk.Button:
             source = 'click'
         else:
             source = 'esc-key'
