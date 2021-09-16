@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Komikku 0.25.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-16 09:39+0200\n"
+"POT-Creation-Date: 2021-09-16 09:52+0200\n"
 "PO-Revision-Date: 2021-02-22 10:07+0100\n"
 "Last-Translator: Mek101 <mek101-dev.inv@slmail.me>\n"
 "Language-Team: Italian <mek101-dev.inv@slmail.me>\n"
@@ -1908,12 +1908,10 @@ msgid "Tags to exclude from search"
 msgstr "Tag da escludere dalla ricerca"
 
 #: ../komikku/servers/exceptions.py:10
-#: ../komikku/servers_empty/exceptions.py:10
 msgid "Error: {}"
 msgstr ""
 
 #: ../komikku/servers/exceptions.py:16
-#: ../komikku/servers_empty/exceptions.py:16
 msgid "No longer exists."
 msgstr ""
 
