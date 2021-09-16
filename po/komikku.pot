@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Komikku 0.31.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-09-12 00:58+0200\n"
+"POT-Creation-Date: 2021-09-16 09:39+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1254,7 +1254,11 @@ msgstr ""
 msgid "Crop Borders"
 msgstr ""
 
-#: ../data/ui/menu/reader.xml:88
+#: ../data/ui/menu/reader.xml:85
+msgid "Hide Page Numbering"
+msgstr ""
+
+#: ../data/ui/menu/reader.xml:92
 msgid "Save Page"
 msgstr ""
 
@@ -1322,7 +1326,7 @@ msgstr ""
 msgid "Whether to enable servers with NSFW only content"
 msgstr ""
 
-#: ../data/ui/preferences.ui:226 ../data/ui/preferences.ui:294
+#: ../data/ui/preferences.ui:226 ../data/ui/preferences.ui:312
 msgid "Reader"
 msgstr ""
 
@@ -1343,26 +1347,34 @@ msgid "Crop white borders of images"
 msgstr ""
 
 #: ../data/ui/preferences.ui:275
-msgid "Fullscreen"
+msgid "Page Numbering"
 msgstr ""
 
 #: ../data/ui/preferences.ui:277
+msgid "Hide the page numbering at the bottom of the screen while reading"
+msgstr ""
+
+#: ../data/ui/preferences.ui:293
+msgid "Fullscreen"
+msgstr ""
+
+#: ../data/ui/preferences.ui:295
 msgid "Automatically enter fullscreen mode"
 msgstr ""
 
-#: ../data/ui/preferences.ui:304 ../data/ui/preferences.ui:333
+#: ../data/ui/preferences.ui:322 ../data/ui/preferences.ui:351
 msgid "Advanced"
 msgstr ""
 
-#: ../data/ui/preferences.ui:309
+#: ../data/ui/preferences.ui:327
 msgid "Credentials storage"
 msgstr ""
 
-#: ../data/ui/preferences.ui:314
+#: ../data/ui/preferences.ui:332
 msgid "Allow plaintext storage as fallback"
 msgstr ""
 
-#: ../data/ui/preferences.ui:316
+#: ../data/ui/preferences.ui:334
 msgid "Used when no keyring backends are found"
 msgstr ""
 
@@ -1436,43 +1448,43 @@ msgctxt "Shortcut window description"
 msgid "Select all downloads"
 msgstr ""
 
-#: ../komikku/application.py:107
+#: ../komikku/application.py:108
 msgid "Multiple URLs not supported"
 msgstr ""
 
-#: ../komikku/application.py:123
+#: ../komikku/application.py:124
 msgid "Invalid URL {}, not handled by any server."
 msgstr ""
 
-#: ../komikku/application.py:134 ../komikku/application.py:138
+#: ../komikku/application.py:135 ../komikku/application.py:139
 msgid "Komikku"
 msgstr ""
 
-#: ../komikku/application.py:355 ../komikku/reader/__init__.py:217
+#: ../komikku/application.py:356 ../komikku/reader/__init__.py:239
 msgid "Cancel"
 msgstr ""
 
-#: ../komikku/application.py:355
+#: ../komikku/application.py:356
 msgid "Yes"
 msgstr ""
 
-#: ../komikku/application.py:417
+#: ../komikku/application.py:418
 msgid "Contributors: Code, Patches, Debugging:"
 msgstr ""
 
-#: ../komikku/application.py:445
+#: ../komikku/application.py:446
 msgid "Are you sure you want to quit?"
 msgstr ""
 
-#: ../komikku/application.py:448
+#: ../komikku/application.py:449
 msgid "Some chapters are currently being downloaded."
 msgstr ""
 
-#: ../komikku/application.py:450
+#: ../komikku/application.py:451
 msgid "Some mangas are currently being updated."
 msgstr ""
 
-#: ../komikku/application.py:453
+#: ../komikku/application.py:454
 msgid "Quit?"
 msgstr ""
 
@@ -1559,27 +1571,27 @@ msgstr ""
 msgid "Oops, server website URL is unknown."
 msgstr ""
 
-#: ../komikku/explorer.py:484
+#: ../komikku/explorer.py:486
 msgid "Oops, failed to retrieve manga's information."
 msgstr ""
 
-#: ../komikku/explorer.py:517
+#: ../komikku/explorer.py:519
 msgid "Pinned"
 msgstr ""
 
-#: ../komikku/explorer.py:615
+#: ../komikku/explorer.py:617
 msgid "MOST POPULARS"
 msgstr ""
 
-#: ../komikku/explorer.py:648
+#: ../komikku/explorer.py:650
 msgid "Oops, search failed. Please try again."
 msgstr ""
 
-#: ../komikku/explorer.py:650
+#: ../komikku/explorer.py:652
 msgid "No results"
 msgstr ""
 
-#: ../komikku/explorer.py:679
+#: ../komikku/explorer.py:681
 msgid "Servers"
 msgstr ""
 
@@ -1599,124 +1611,124 @@ msgstr ""
 msgid "All"
 msgstr ""
 
-#: ../komikku/models/database.py:343
+#: ../komikku/models/database.py:350
 msgid "Complete"
 msgstr ""
 
-#: ../komikku/models/database.py:344
+#: ../komikku/models/database.py:351
 msgid "Ongoing"
 msgstr ""
 
-#: ../komikku/models/database.py:345
+#: ../komikku/models/database.py:352
 msgid "Suspended"
 msgstr ""
 
-#: ../komikku/models/database.py:346
+#: ../komikku/models/database.py:353
 msgid "Hiatus"
 msgstr ""
 
-#: ../komikku/models/database.py:953
+#: ../komikku/models/database.py:961
 msgid "Download pending"
 msgstr ""
 
-#: ../komikku/models/database.py:954
+#: ../komikku/models/database.py:962
 msgid "Downloaded"
 msgstr ""
 
-#: ../komikku/models/database.py:955
+#: ../komikku/models/database.py:963
 msgid "Downloading"
 msgstr ""
 
-#: ../komikku/models/database.py:956
+#: ../komikku/models/database.py:964
 msgid "Download error"
 msgstr ""
 
-#: ../komikku/preferences.py:211
+#: ../komikku/preferences.py:215
 msgid "⬅ Right to Left"
 msgstr ""
 
-#: ../komikku/preferences.py:212
+#: ../komikku/preferences.py:216
 msgid "➡ Left to Right"
 msgstr ""
 
-#: ../komikku/preferences.py:213
+#: ../komikku/preferences.py:217
 msgid "⬇ Vertical"
 msgstr ""
 
-#: ../komikku/preferences.py:214
+#: ../komikku/preferences.py:218
 msgid "⬇ Webtoon"
 msgstr ""
 
-#: ../komikku/preferences.py:222
+#: ../komikku/preferences.py:226
 msgid "Adapt to Screen"
 msgstr ""
 
-#: ../komikku/preferences.py:223
+#: ../komikku/preferences.py:227
 msgid "Adapt to Width"
 msgstr ""
 
-#: ../komikku/preferences.py:224
+#: ../komikku/preferences.py:228
 msgid "Adapt to Height"
 msgstr ""
 
-#: ../komikku/preferences.py:225
+#: ../komikku/preferences.py:229
 msgid "Original Size"
 msgstr ""
 
-#: ../komikku/preferences.py:233
+#: ../komikku/preferences.py:237
 msgid "White"
 msgstr ""
 
-#: ../komikku/preferences.py:234
+#: ../komikku/preferences.py:238
 msgid "Black"
 msgstr ""
 
-#: ../komikku/preferences.py:301
+#: ../komikku/preferences.py:309
 msgid "Servers Languages"
 msgstr ""
 
-#: ../komikku/preferences.py:380
+#: ../komikku/preferences.py:388
 msgid "User Account"
 msgstr ""
 
-#: ../komikku/preferences.py:408
+#: ../komikku/preferences.py:416
 msgid "System keyring service is disabled. Credential cannot be saved."
 msgstr ""
 
-#: ../komikku/preferences.py:413
+#: ../komikku/preferences.py:421
 msgid ""
 "No keyring backends were found to store credential. Use plaintext storage as "
 "fallback."
 msgstr ""
 
-#: ../komikku/preferences.py:418
+#: ../komikku/preferences.py:426
 msgid ""
 "No keyring backends were found to store credential. Plaintext storage will "
 "be used as fallback."
 msgstr ""
 
-#: ../komikku/preferences.py:421
+#: ../komikku/preferences.py:429
 msgid "Test"
 msgstr ""
 
-#: ../komikku/preferences.py:461
+#: ../komikku/preferences.py:469
 msgid "Servers Settings"
 msgstr ""
 
-#: ../komikku/reader/__init__.py:213
+#: ../komikku/reader/__init__.py:235
 msgid "Please choose a file"
 msgstr ""
 
-#: ../komikku/reader/__init__.py:219
+#: ../komikku/reader/__init__.py:241
 msgid "Save"
 msgstr ""
 
-#: ../komikku/reader/__init__.py:238
+#: ../komikku/reader/__init__.py:260
 msgid ""
 "Failed to save page: missing permission to access the XDG pictures directory"
 msgstr ""
 
-#: ../komikku/reader/__init__.py:242
+#: ../komikku/reader/__init__.py:264
 #, python-brace-format
 msgid "Page successfully saved to {0}"
 msgstr ""
@@ -1801,10 +1813,12 @@ msgid "Tags to exclude from search"
 msgstr ""
 
 #: ../komikku/servers/exceptions.py:10
+#: ../komikku/servers_empty/exceptions.py:10
 msgid "Error: {}"
 msgstr ""
 
 #: ../komikku/servers/exceptions.py:16
+#: ../komikku/servers_empty/exceptions.py:16
 msgid "No longer exists."
 msgstr ""
 
