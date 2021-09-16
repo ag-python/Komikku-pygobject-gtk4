@@ -277,8 +277,8 @@ def delete_rows(db_conn, table, ids):
     else:
         sql = 'DELETE FROM {0} WHERE id = ?'.format(table)
 
-        for item in ids:
-            seq.append((item, ))
+        for id in ids:
+            seq.append((id, ))
 
     try:
         db_conn.executemany(sql, seq)
@@ -331,8 +331,8 @@ def update_rows(db_conn, table, ids, data):
     sql = 'UPDATE {0} SET {1} WHERE id = ?'.format(table, ', '.join(k + ' = ?' for k in data[0]))
 
     seq = []
-    for i, item in enumerate(ids):
-        seq.append(tuple(data[i].values()) + (item, ))
+    for index, id in enumerate(ids):
+        seq.append(tuple(data[index].values()) + (id, ))
 
     try:
         db_conn.executemany(sql, seq)
