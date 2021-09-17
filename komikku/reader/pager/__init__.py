@@ -44,7 +44,7 @@ class BasePager:
 
         # Gesture for mouse click/touch navigation
         self.gesture_click = Gtk.GestureMultiPress.new(self.scrolledwindow)
-        self.gesture_click.set_propagation_phase(Gtk.PropagationPhase.CAPTURE)
+        self.gesture_click.set_propagation_phase(Gtk.PropagationPhase.BUBBLE)
         self.gesture_click.set_exclusive(True)
         self.gesture_click.set_button(1)
 
