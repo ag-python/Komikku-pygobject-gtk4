@@ -1,14 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# Copyright (C) 2021 Mariusz Kurek
 # This file is distributed under the same license as the Komikku package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# Mariusz Kurek <mariuszkurek@pm.me>, 2021.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Komikku 0.31.0\n"
+"Project-Id-Version: Komikku 0.32.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-16 09:52+0200\n"
-"PO-Revision-Date: 2021-09-13 11:35+0200\n"
+"PO-Revision-Date: 2021-09-17 17:47+0200\n"
 "Last-Translator: Mariusz Kurek <mariuszkurek@pm.me>\n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -1365,7 +1365,7 @@ msgstr "Przycinanie krawędzi"
 
 #: ../data/ui/menu/reader.xml:85
 msgid "Hide Page Numbering"
-msgstr ""
+msgstr "Ukryj numerację stron"
 
 #: ../data/ui/menu/reader.xml:92
 msgid "Save Page"
@@ -1457,15 +1457,15 @@ msgstr "Ucinaj białe krawędzie obrazów"
 
 #: ../data/ui/preferences.ui:275
 msgid "Page Numbering"
-msgstr ""
+msgstr "Numeracja stron"
 
 #: ../data/ui/preferences.ui:277
 msgid "Hide the page numbering at the bottom of the screen while reading"
-msgstr ""
+msgstr "Ukryj numerację stron na dole ekranu podczas czytania"
 
 #: ../data/ui/preferences.ui:293
 msgid "Fullscreen"
-msgstr "Pełny ekrany"
+msgstr "Pełny ekran"
 
 #: ../data/ui/preferences.ui:295
 msgid "Automatically enter fullscreen mode"
