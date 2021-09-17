@@ -879,13 +879,12 @@ class Thumbnail(Gtk.FlowBoxChild):
         context.arc(radius, self.height - radius, radius, arc_1, arc_2)
         context.arc(radius, radius, radius, arc_2, arc_3)
         context.close_path()
-
         context.clip()
 
         context.scale(1 / self.window.hidpi_scale, 1 / self.window.hidpi_scale)
-
         Gdk.cairo_set_source_pixbuf(context, pixbuf, 0, 0)
         context.paint()
+        context.scale(self.window.hidpi_scale, self.window.hidpi_scale)
 
     def _draw_name(self):
         self.name_label.set_text(self.manga.name)
