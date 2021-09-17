@@ -138,7 +138,6 @@ class Reader:
 
         # Init pager
         self.init_pager(chapter)
-        self.set_action_background_color()
 
         self.show()
 
@@ -151,6 +150,7 @@ class Reader:
             self.pager = Pager(self)
 
         self.set_orientation()
+        self.set_action_background_color()
 
         self.viewport.add(self.pager)
 
