@@ -29,13 +29,19 @@
 
     <screenshots>
         <screenshot type="default">
-            <image>https://gitlab.com/valos/Komikku/raw/master/screenshots/main-window.png</image>
+            <image>https://gitlab.com/valos/Komikku/raw/master/screenshots/library.png</image>
         </screenshot>
         <screenshot>
-            <image>https://gitlab.com/valos/Komikku/raw/master/screenshots/add-servers.png</image>
+            <image>https://gitlab.com/valos/Komikku/raw/master/screenshots/library-with-categories.png</image>
         </screenshot>
         <screenshot>
             <image>https://gitlab.com/valos/Komikku/raw/master/screenshots/preferences.png</image>
+        </screenshot>
+        <screenshot>
+            <image>https://gitlab.com/valos/Komikku/raw/master/screenshots/explorer.png</image>
+        </screenshot>
+        <screenshot>
+            <image>https://gitlab.com/valos/Komikku/raw/master/screenshots/categories-editor.png</image>
         </screenshot>
         <screenshot>
             <image>https://gitlab.com/valos/Komikku/raw/master/screenshots/card-info.png</image>
@@ -85,7 +91,7 @@
                     <li>[Servers] Add Hachirumi [EN]</li>
                     <li>[Servers] Add Jpmangas [FR]</li>
                     <li>[Servers] Add Magical Translators [EN/PL]</li>
-                    <li>[Servers] Read Manga server: Update</li>
+                    <li>[Servers] Read Manga: Update</li>
                     <li>[Servers] Read Comic Online: Update</li>
                     <li>[Servers] Webtoon: Update</li>
                     <li>[Servers] MangaDex: Update</li>
