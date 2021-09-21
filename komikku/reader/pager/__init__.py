@@ -371,6 +371,9 @@ class Pager(Handy.Carousel, BasePager):
         new_page.render()
 
     def goto_page(self, index):
+        if index < 0:
+            return
+
         if self.pages[0].index == index and self.pages[0].chapter == self.current_page.chapter:
             self.scroll_to_direction('left')
         elif self.pages[2].index == index and self.pages[2].chapter == self.current_page.chapter:
