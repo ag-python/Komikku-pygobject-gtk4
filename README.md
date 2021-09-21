@@ -17,10 +17,10 @@ Komikku is licensed under the [GPLv3+](https://www.gnu.org/licenses/gpl-3.0.html
 * RTL, LTR, Vertical and Webtoon reading modes
 * Several types of navigation:
   * Keyboard arrow keys
-  * Mouse click
+  * Right and left navigation layout via mouse click or tapping (touchpad/touch screen)
   * Mouse wheel
-  * 2-fingers swipe gesture
-  * Swipe gesture on touch screens
+  * 2-fingers swipe gesture (touchpad)
+  * Swipe gesture (touch screen)
 * Automatic update of comics
 * Automatic download of new chapters
 * Light and dark themes
