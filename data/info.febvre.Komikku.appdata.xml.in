@@ -3,7 +3,7 @@
     <id>info.febvre.Komikku</id>
     <translation type="gettext">info.febvre.Komikku</translation>
     <project_license>GPL-3.0</project_license>
-    <metadata_license>CC0-1.0</metadata_license>
+    <metadata_license>CC-BY-4.0</metadata_license>
     <content_rating type="oars-1.1" />
 
     <name>Komikku</name>
@@ -16,15 +16,7 @@
             <li>Offline reading of downloaded comics</li>
             <li>Categories to organize your library</li>
             <li>RTL, LTR, Vertical and Webtoon reading modes</li>
-            <li>Support several types of navigation:
-                <ul>
-                    <li>Keyboard arrow keys</li>
-                    <li>Right and left navigation layout via mouse click or tapping (touchpad/touch screen)</li>
-                    <li>Mouse wheel</li>
-                    <li>2-fingers swipe gesture (touchpad)</li>
-                    <li>Swipe gesture (touch screen)</li>
-                </ul>
-            </li>
+            <li>Support several types of navigation: keyboard arrows, right and left navigation layout via mouse click or tapping (touchpad/touch screen), mouse wheel, 2-fingers swipe gesture (touchpad), swipe gesture (touch screen)</li>
             <li>Automatic update of comics</li>
             <li>Automatic download of new chapters</li>
             <li>Light and dark themes</li>
@@ -89,6 +81,13 @@
 
     <launchable type="desktop-id">info.febvre.Komikku.desktop</launchable>
     <releases>
+        <release version="0.33.1" date="2021-09-22">
+            <description>
+                <ul>
+                    <li>[Servers] Read Manga: Update</li>
+                </ul>
+            </description>
+        </release>
         <release version="0.33.0" date="2021-09-22">
             <description>
                 <ul>
