@@ -9,9 +9,9 @@ from gi.repository import Gtk
 from gi.repository import Handy
 
 from komikku.models import Settings
-from komikku.servers import get_server_main_id_by_id
-from komikku.servers import get_servers_list
 from komikku.servers import LANGUAGES
+from komikku.servers.utils import get_server_main_id_by_id
+from komikku.servers.utils import get_servers_list
 from komikku.utils import KeyringHelper
 
 

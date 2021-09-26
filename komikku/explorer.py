@@ -18,9 +18,9 @@ from gi.repository.GdkPixbuf import PixbufAnimation
 from komikku.models import create_db_connection
 from komikku.models import Manga
 from komikku.models import Settings
-from komikku.servers import get_allowed_servers_list
-from komikku.servers import get_buffer_mime_type
 from komikku.servers import LANGUAGES
+from komikku.servers.utils import get_allowed_servers_list
+from komikku.servers.utils import get_buffer_mime_type
 from komikku.utils import create_cairo_surface_from_pixbuf
 from komikku.utils import html_escape
 from komikku.utils import log_error_traceback
