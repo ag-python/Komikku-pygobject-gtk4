@@ -614,7 +614,7 @@
                             </child>
                             <child>
                               <object class="GtkButton">
-                                <property name="label" translatable="yes">Add first comics</property>
+                                <property name="label" translatable="yes">Discover new readings</property>
                                 <property name="visible">True</property>
                                 <property name="can-focus">True</property>
                                 <property name="receives-default">True</property>
