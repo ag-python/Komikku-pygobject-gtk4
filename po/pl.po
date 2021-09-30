@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: Komikku 0.32.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-09-29 16:20+0200\n"
-"PO-Revision-Date: 2021-09-17 17:47+0200\n"
+"PO-Revision-Date: 2021-09-30 18:55+0200\n"
 "Last-Translator: Mariusz Kurek <mariuszkurek@pm.me>\n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -28,26 +28,27 @@ msgstr "Czytaj swoje ulubione mangi online i offline"
 msgid ""
 "Komikku is a manga, manhwa, manhua, webtoons, webcomics and comics reader."
 msgstr ""
+"Komikku to czytnik mang, manhwy, manhuy, webtoonów, e-komiksów i komiksów."
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:13
 msgid "Features"
-msgstr ""
+msgstr "Funkcje"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:15
 msgid "Online reading from dozens of servers"
-msgstr ""
+msgstr "Czytanie online z dziesiątek serwerów"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:16
 msgid "Offline reading of downloaded comics"
-msgstr ""
+msgstr "Czytanie offline pobranych komiksów"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:17
 msgid "Categories to organize your library"
-msgstr ""
+msgstr "Organizowanie Twojej biblioteki według kategorii"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:18
 msgid "RTL, LTR, Vertical and Webtoon reading modes"
-msgstr ""
+msgstr "Tryby czytania RTL, LTR, pionowy i webtoon"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:19
 msgid ""
@@ -55,22 +56,28 @@ msgid ""
 "navigation layout via mouse click or tapping (touchpad/touch screen), mouse "
 "wheel, 2-fingers swipe gesture (touchpad), swipe gesture (touch screen)"
 msgstr ""
+"Wsparcie dla wielu typów nawigacji: klawisze strzałek na klawiaturze, "
+"nawigowanie w lewo i w prawo przez kliknięcie myszką bądź dotknięcie "
+"(touchpad/ekran dotykowy), rolka, gest przewijania dwoma palcami (touchpad), "
+"gest przewijania (ekran dotykowy)"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:20
 msgid "Automatic update of comics"
-msgstr ""
+msgstr "Automatyczne aktualizowanie komiksów"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:21
 msgid "Automatic download of new chapters"
-msgstr ""
+msgstr "Automatyczne pobieranie nowych rozdziałów"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:22
 msgid "Light and dark themes"
-msgstr ""
+msgstr "Motywy jasny i ciemny"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:24
 msgid "It focuses on providing a clean, intuitive and adaptive interface."
 msgstr ""
+"Skupia się na zapewnieniu prostego, intuicyjnego i dostosowującego się "
+"interfejsu."
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:76
 msgid "Valéry Febvre"
@@ -85,21 +92,23 @@ msgstr "[Serwery] Read Manga: aktualizacja"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:94
 msgid "[Reader] Controls overlay: Fix a bug in pages slider"
-msgstr ""
+msgstr "[Czytnik] Sterowanie: naprawiono błąd z paskiem przewijania stron"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:95
 msgid "[Servers] Add MangaKawaii [EN]"
-msgstr ""
+msgstr "[Serwery] Dodano MangaKawaii [EN]"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:96
 msgid "[Servers] Guya: Update"
-msgstr ""
+msgstr "[Serweyr] Guya: aktualizacja"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:97
 msgid ""
 "[Servers] MangaFreak: Add notification to notify user when webview failed to "
 "solve Cloudflare JS challenge"
 msgstr ""
+"[Serwery] MangaFreak: dodano powiadomienie informujące użytkownika, kiedy "
+"nie powiedzie się przejście zabezpieczenia JS Cloudflare"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:98
 #: ../data/info.febvre.Komikku.appdata.xml.in:159
@@ -111,45 +120,49 @@ msgstr "[Serwery] MangaKawaii: aktualizacja"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:99
 msgid "[Servers] Tapas: Get dates while resolving chapters"
-msgstr ""
+msgstr "[Serwery] Tapas: uzyskaj daty podczas odczytywania rozdziałów"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:100
 msgid "[L10n] Update Polish translation"
-msgstr ""
+msgstr "[L10n] Zaktualizowano tłumaczenie na polski"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:107
 msgid ""
 "[Library] Thumbnails: Fix rendering of servers logos and badges on mobile "
 "devices"
 msgstr ""
+"[Biblioteka] Miniatury: naprawiono renderowanie logo serwerów i plakietek na "
+"urządzeniach mobilnych"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:108
 msgid "[Card] Fixed synopsis display when it contains HTML"
-msgstr ""
+msgstr "[Karta] Naprawiono wyświetlanie opisów zawierających HTML"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:109
 msgid "[Reader] Add option to hide page numbering"
-msgstr ""
+msgstr "[Czytnik] Dodano opcję ukrywania numeracji stron"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:110
 msgid "[Reader] Fixed pager jumps when page rendering is retried"
 msgstr ""
+"[Przeglądarka] Naprawiono przeskakiwanie pagera przy ponownej próbie "
+"renderowania strony"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:111
 msgid "[Explorer] Servers: Don't show Pinned when empty"
-msgstr ""
+msgstr "[Przeglądarka] Serwery: Nie pokazuj pustej sekcji Przypięte"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:112
 msgid "[Servers] Add Best Manga [RU]"
-msgstr ""
+msgstr "[Serwery] Dodano Best Manga (RU)"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:113
 msgid "[Servers] Add Bilibili [EN]"
-msgstr ""
+msgstr "[Serwery] Dodano Bilibili [EN]"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:114
 msgid "[Servers] Add Tapas [EN]"
-msgstr ""
+msgstr "[Serwery] Dodano Tapas [EN]"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:115
 #: ../data/info.febvre.Komikku.appdata.xml.in:136
@@ -385,7 +398,7 @@ msgstr "[L10n] Zaktualizowano tłumaczenie na niemiecki"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:212
 msgid "[Library] Add Categories to organize the library"
-msgstr "[Biblioteka] Dodano kategorie, by uporządkować bibliotekę"
+msgstr "[Biblioteka] Dodano porządkowanie biblioteki według kategorii"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:213
 msgid "[Servers] Add Read Comics Online (EN)"
@@ -1316,7 +1329,7 @@ msgstr "Menedżer pobierania"
 
 #: ../data/ui/application_window.ui:617
 msgid "Discover new readings"
-msgstr ""
+msgstr "Odkryj nowe pozycje"
 
 #: ../data/ui/application_window.ui:752
 msgid "OK"
@@ -1999,7 +2012,7 @@ msgstr "Kategorie"
 
 #: ../komikku/servers/dynasty/__init__.py:38
 msgid "Types of comics to search for"
-msgstr ""
+msgstr "Typy komiksów do znalezienia"
 
 #: ../komikku/servers/dynasty/__init__.py:41
 msgid "Anthology"
@@ -2044,6 +2057,7 @@ msgstr "Błąd: {}"
 #: ../komikku/servers/exceptions.py:16
 msgid "Failed to bypass Cloudfare protection. Please try again."
 msgstr ""
+"Nie udało się obejść zabezpieczenia Cloudflare. Proszę spróbować ponownie."
 
 #: ../komikku/servers/exceptions.py:21
 msgid "No longer exists."
@@ -2051,27 +2065,27 @@ msgstr "Już nie istnieje."
 
 #: ../komikku/servers/multi/manga_stream.py:35
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 #: ../komikku/servers/multi/manga_stream.py:36
 msgid "Type of comics to search for"
-msgstr ""
+msgstr "Typ komiksów do znalezienia"
 
 #: ../komikku/servers/multi/manga_stream.py:41
 msgid "Manga"
-msgstr ""
+msgstr "Manga"
 
 #: ../komikku/servers/multi/manga_stream.py:42
 msgid "Manhwa"
-msgstr ""
+msgstr "Manhwa"
 
 #: ../komikku/servers/multi/manga_stream.py:43
 msgid "Manhua"
-msgstr ""
+msgstr "Manhua"
 
 #: ../komikku/servers/multi/manga_stream.py:44
 msgid "Comic"
-msgstr ""
+msgstr "Komiks"
 
 #: ../komikku/servers/readmanhwa/__init__.py:44
 msgid "NSFW Content"
@@ -2121,18 +2135,3 @@ msgstr "Obecnie jesteś offline"
 msgid "No Internet connection, timeout or server down"
 msgstr ""
 "Brak połączenia z internetem, upłynął limit czasu albo serwer nie odpowiada"
-
-#~ msgid ""
-#~ "Komikku is a manga, manhwa, manhua, webtoons, webcomics and comics reader "
-#~ "for GNOME. It focuses on providing a clean, intuitive and adaptive "
-#~ "interface."
-#~ msgstr ""
-#~ "Komikku to czytnik mang, manhwy, manhuy, webtoonów, e-komiksów i komiksów "
-#~ "dla GNOME. Skupia się na zapewnieniu prostego, intuicyjnego i "
-#~ "dostosowującego się interfejsu."
-
-#~ msgid "[Servers] Read Manga server: Update"
-#~ msgstr "[Serwery] Serwer Read Manga: aktualizacja"
-
-#~ msgid "Types of manga to search for"
-#~ msgstr "Typy mang do wyszukania"
