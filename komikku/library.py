@@ -281,6 +281,7 @@ class Library:
         self.selection_mode_last_thumbnail_index = selected_thumbnail.get_index()
 
         self.window.headerbar.get_style_context().add_class('selection-mode')
+        self.window.left_button.set_tooltip_text(_('Back'))
         self.window.left_button_image.set_from_icon_name('go-previous-symbolic', Gtk.IconSize.BUTTON)
         self.window.menu_button.set_menu_model(self.builder.get_object('menu-library-selection-mode'))
 
@@ -300,6 +301,7 @@ class Library:
             self.categories_list.leave_edit_mode(refresh_library=refresh_library)
 
         self.window.headerbar.get_style_context().remove_class('selection-mode')
+        self.window.left_button.set_tooltip_text(_('Add new comic'))
         self.window.left_button_image.set_from_icon_name('list-add-symbolic', Gtk.IconSize.BUTTON)
         self.window.menu_button.set_menu_model(self.builder.get_object('menu'))
 
@@ -501,6 +503,7 @@ class Library:
             self.flowbox.select_child(thumbnail)
 
     def show(self, invalidate_sort=False):
+        self.window.left_button.set_tooltip_text(_('Add new comic'))
         self.window.left_button_image.set_from_icon_name('list-add-symbolic', Gtk.IconSize.BUTTON)
 
         if self.page == 'flowbox':

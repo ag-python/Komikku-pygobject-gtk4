@@ -335,6 +335,7 @@ class Explorer(Gtk.Stack):
             self.window.library.on_manga_added(self.manga)
 
             self.card_page_add_read_button.set_sensitive(True)
+            self.card_page_add_read_button.set_tooltip_text(_('Read'))
             self.card_page_add_read_button.get_children()[0].set_from_icon_name('media-playback-start-symbolic', Gtk.IconSize.BUTTON)
             self.window.activity_indicator.stop()
 
@@ -666,6 +667,7 @@ class Explorer(Gtk.Stack):
     def show(self, transition=True, servers=None):
         self.page = None
 
+        self.window.left_button.set_tooltip_text(_('Back'))
         self.window.left_button_image.set_from_icon_name('go-previous-symbolic', Gtk.IconSize.BUTTON)
         self.window.library_flap_reveal_button.hide()
         self.window.right_button_stack.show()
@@ -704,8 +706,10 @@ class Explorer(Gtk.Stack):
             if row:
                 self.manga = Manga.get(row['id'], self.server)
 
+                self.card_page_add_read_button.set_tooltip_text(_('Read'))
                 self.card_page_add_read_button.get_children()[0].set_from_icon_name('media-playback-start-symbolic', Gtk.IconSize.BUTTON)
             else:
+                self.card_page_add_read_button.set_tooltip_text(_('Add to library'))
                 self.card_page_add_read_button.get_children()[0].set_from_icon_name('list-add-symbolic', Gtk.IconSize.BUTTON)
 
         self.window.right_button_stack.set_visible_child_name('explorer.' + name)

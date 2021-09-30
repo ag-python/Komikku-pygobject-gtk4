@@ -273,6 +273,7 @@
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="receives-default">True</property>
+                        <property name="tooltip-text" translatable="yes">Toggle category sidebar</property>
                         <child>
                           <object class="GtkImage">
                             <property name="visible">True</property>
@@ -292,6 +293,7 @@
                     <property name="visible">True</property>
                     <property name="can-focus">True</property>
                     <property name="receives-default">True</property>
+                    <property name="tooltip-text" translatable="yes">Menu</property>
                     <child>
                       <object class="GtkImage" id="menu_button_image">
                         <property name="visible">True</property>
@@ -314,6 +316,7 @@
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="receives-default">True</property>
+                        <property name="tooltip-text" translatable="yes">Search</property>
                         <child>
                           <object class="GtkImage">
                             <property name="visible">True</property>
@@ -331,6 +334,7 @@
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="receives-default">True</property>
+                        <property name="tooltip-text" translatable="yes">Resume read</property>
                         <child>
                           <object class="GtkImage">
                             <property name="visible">True</property>
@@ -349,6 +353,7 @@
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="receives-default">True</property>
+                        <property name="tooltip-text" translatable="yes">Toggle fullscreen mode</property>
                         <child>
                           <object class="GtkImage">
                             <property name="visible">True</property>
@@ -367,6 +372,7 @@
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="receives-default">True</property>
+                        <property name="tooltip-text" translatable="yes">Start/Stop download</property>
                         <child>
                           <object class="GtkImage">
                             <property name="visible">True</property>
@@ -385,6 +391,7 @@
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="receives-default">True</property>
+                        <property name="tooltip-text" translatable="yes">Open in Browser</property>
                         <child>
                           <object class="GtkImage">
                             <property name="visible">True</property>
@@ -421,6 +428,7 @@
                         <property name="visible">True</property>
                         <property name="can-focus">True</property>
                         <property name="receives-default">True</property>
+                        <property name="tooltip-text" translatable="yes">Search</property>
                         <child>
                           <object class="GtkImage">
                             <property name="visible">True</property>

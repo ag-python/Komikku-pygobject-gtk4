@@ -118,6 +118,7 @@ class CategoriesEditor(Handy.Clamp):
     def show(self, transition=True):
         self.populate()
 
+        self.window.left_button.set_tooltip_text(_('Back'))
         self.window.left_button_image.set_from_icon_name('go-previous-symbolic', Gtk.IconSize.BUTTON)
         self.window.library_flap_reveal_button.hide()
 
