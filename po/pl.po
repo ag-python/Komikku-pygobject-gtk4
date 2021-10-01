@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Komikku 0.32.0\n"
+"Project-Id-Version: Komikku 0.34.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-01 14:03+0200\n"
-"PO-Revision-Date: 2021-09-30 18:55+0200\n"
+"PO-Revision-Date: 2021-10-01 17:21+0200\n"
 "Last-Translator: Mariusz Kurek <mariuszkurek@pm.me>\n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -85,47 +85,47 @@ msgstr "Valéry Febvre"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:87
 msgid "[Servers] Add Asura Scans [EN, TR]"
-msgstr ""
+msgstr "[Serwery] Dodano Asura Scans [EN, TR]"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:88
 msgid "[Servers] Add FR Scan [FR]"
-msgstr ""
+msgstr "[Serwery] Dodano FR Scan [FR]"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:89
 msgid "[Servers] Add Lelscan-VF [FR]"
-msgstr ""
+msgstr "[Serwery] Dodano Lelscan-VF [FR]"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:90
 msgid "[Servers] Add Leomanga [ES]"
-msgstr ""
+msgstr "[Serwery] Dodano Leomanga [ES]"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:91
 msgid "[Servers] Add Phoenix Fansub [ES]"
-msgstr ""
+msgstr "[Serwery] Dodano Phoenix Fansub [ES]"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:92
 msgid "[Servers] Add Mangadoor [ES]"
-msgstr ""
+msgstr "[Serwery] Dodano Mangadoor [ES]"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:93
 msgid "[Servers] Add Mangas.in [ES]"
-msgstr ""
+msgstr "[Serwery] Dodano Mangas.in [ES]"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:94
 msgid "[Servers] Add Scan FR [FR]"
-msgstr ""
+msgstr "[Serwery] Dodano Scan FR [FR]"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:95
 msgid "[Servers] Add Scan OP [FR]"
-msgstr ""
+msgstr "[Serwery] Dodano Scan OP [FR]"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:96
 msgid "[Servers] Bilibili: Update"
-msgstr ""
+msgstr "[Serwery] Bilibili: aktualizacja"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:97
 msgid "[Servers] Jpmangas: Update"
-msgstr ""
+msgstr "[Serwery] Jpmangas: aktualizacja"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:98
 #: ../data/info.febvre.Komikku.appdata.xml.in:338
@@ -1374,27 +1374,27 @@ msgstr "Menedżer pobierania"
 
 #: ../data/ui/application_window.ui:276
 msgid "Toggle category sidebar"
-msgstr ""
+msgstr "Przełącz pasek boczny kategorii"
 
 #: ../data/ui/application_window.ui:296
 msgid "Menu"
-msgstr ""
+msgstr "Menu"
 
 #: ../data/ui/application_window.ui:319 ../data/ui/application_window.ui:431
 msgid "Search"
-msgstr ""
+msgstr "Wyszukaj"
 
 #: ../data/ui/application_window.ui:337
 msgid "Resume read"
-msgstr ""
+msgstr "Wznów czytanie"
 
 #: ../data/ui/application_window.ui:356
 msgid "Toggle fullscreen mode"
-msgstr ""
+msgstr "Przełącz tryb pełnoekranowy"
 
 #: ../data/ui/application_window.ui:375
 msgid "Start/Stop download"
-msgstr ""
+msgstr "Rozpocznij/zatrzymaj pobieranie"
 
 #: ../data/ui/application_window.ui:394 ../data/ui/menu/card.xml:60
 msgid "Open in Browser"
@@ -1813,7 +1813,7 @@ msgstr "Nie udało się uzyskać URL mangi"
 #: ../komikku/downloader.py:490 ../komikku/explorer.py:670
 #: ../komikku/library.py:284 ../komikku/preferences.py:265
 msgid "Back"
-msgstr ""
+msgstr "Wstecz"
 
 #: ../komikku/card.py:602
 msgid "New"
@@ -1873,7 +1873,7 @@ msgstr "Dodano mangę: {0}"
 
 #: ../komikku/explorer.py:338 ../komikku/explorer.py:709
 msgid "Read"
-msgstr ""
+msgstr "Czytaj"
 
 #: ../komikku/explorer.py:383
 msgid "Oops, server website URL is unknown."
@@ -1905,7 +1905,7 @@ msgstr "Serwery"
 
 #: ../komikku/explorer.py:712
 msgid "Add to library"
-msgstr ""
+msgstr "Dodaj do biblioteki"
 
 #: ../komikku/library.py:246
 msgid "Are you sure you want to delete selected mangas?"
@@ -1913,7 +1913,7 @@ msgstr "Czy na pewno chcesz usunąć wybrane mangi?"
 
 #: ../komikku/library.py:304 ../komikku/library.py:506
 msgid "Add new comic"
-msgstr ""
+msgstr "Dodaj nowy komiks"
 
 #: ../komikku/library.py:595
 msgid "Library"
@@ -2144,6 +2144,7 @@ msgstr "Błąd: {}"
 #: ../komikku/servers/exceptions.py:16
 msgid "Failed to bypass Cloudflare protection. Please try again."
 msgstr ""
+"Nie udało się obejść zabezpieczenia Cloudflare. Proszę spróbować ponownie."
 
 #: ../komikku/servers/exceptions.py:21
 msgid "No longer exists."
@@ -2221,7 +2222,3 @@ msgstr "Obecnie jesteś offline"
 msgid "No Internet connection, timeout or server down"
 msgstr ""
 "Brak połączenia z internetem, upłynął limit czasu albo serwer nie odpowiada"
-
-#~ msgid "Failed to bypass Cloudfare protection. Please try again."
-#~ msgstr ""
-#~ "Nie udało się obejść zabezpieczenia Cloudflare. Proszę spróbować ponownie."
