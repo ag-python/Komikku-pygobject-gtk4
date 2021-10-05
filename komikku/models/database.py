@@ -22,7 +22,7 @@ from komikku.utils import get_data_dir
 
 logger = logging.getLogger('komikku')
 
-VERSION = 10
+VERSION = 9
 
 
 def adapt_json(data):
@@ -146,8 +146,17 @@ def init_db():
         recent integer NOT NULL,
         read integer NOT NULL,
         last_page_read_index integer,
-        last_read timestamp,
         UNIQUE (slug, manga_id)
+    );"""
+
+    sql_create_downloads_table = """CREATE TABLE IF NOT EXISTS downloads (
+        id integer PRIMARY KEY,
+        chapter_id integer REFERENCES chapters(id) ON DELETE CASCADE,
+        status text NOT NULL,
+        percent float NOT NULL,
+        errors integer DEFAULT 0,
+        date timestamp NOT NULL,
+        UNIQUE (chapter_id)
     );"""
 
     sql_create_categories_table = """CREATE TABLE IF NOT EXISTS categories (
@@ -160,16 +169,6 @@ def init_db():
         category_id integer REFERENCES categories(id) ON DELETE CASCADE,
         manga_id integer REFERENCES mangas(id) ON DELETE CASCADE,
         UNIQUE (category_id, manga_id)
-    );"""
-
-    sql_create_downloads_table = """CREATE TABLE IF NOT EXISTS downloads (
-        id integer PRIMARY KEY,
-        chapter_id integer REFERENCES chapters(id) ON DELETE CASCADE,
-        status text NOT NULL,
-        percent float NOT NULL,
-        errors integer DEFAULT 0,
-        date timestamp NOT NULL,
-        UNIQUE (chapter_id)
     );"""
 
     db_conn = create_db_connection()
@@ -260,11 +259,6 @@ def init_db():
             # Version 0.32.0
             if execute_sql(db_conn, 'ALTER TABLE mangas ADD COLUMN page_numbering integer;'):
                 db_conn.execute('PRAGMA user_version = {0}'.format(9))
-
-        if 0 < db_version <= 9:
-            # Version 0.35.0
-            if execute_sql(db_conn, 'ALTER TABLE chapters ADD COLUMN last_read timestamp;'):
-                db_conn.execute('PRAGMA user_version = {0}'.format(10))
 
         print('DB version', db_conn.execute('PRAGMA user_version').fetchone()[0])
 
@@ -849,7 +843,6 @@ class Chapter:
         """
         ret = False
 
-        data['last_read'] = datetime.datetime.utcnow()
         for key in data:
             setattr(self, key, data[key])
 
