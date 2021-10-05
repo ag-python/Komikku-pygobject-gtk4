@@ -79,7 +79,7 @@ flowbox flowboxchild {
 
 /* Explorer/Download manager pages */
 .rounded-listbox {
-    background-color: @theme_base_color;
+    background-color: @theme_bg_color;
     border: 1px solid alpha(@borders, 0.7);
     border-radius: 8px;
     -gtk-outline-radius: 7px;
