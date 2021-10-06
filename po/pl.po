@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Komikku 0.34.0\n"
+"Project-Id-Version: Komikku 0.34.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-06 22:35+0200\n"
-"PO-Revision-Date: 2021-10-01 17:21+0200\n"
+"PO-Revision-Date: 2021-10-06 23:30+0200\n"
 "Last-Translator: Mariusz Kurek <mariuszkurek@pm.me>\n"
 "Language-Team: \n"
 "Language: pl\n"
@@ -85,11 +85,11 @@ msgstr "Valéry Febvre"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:89
 msgid "[Servers] MANGA Plus by SHUEISHA: Update"
-msgstr ""
+msgstr "[Serwery] MANGA Plus by SHUEISHA: aktualizacja"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:90
 msgid "[Servers] Mangahub: Fixed bug when summary is missing"
-msgstr ""
+msgstr "[Serwery] Mangahub: naprawiono błąd gdy brakuje opisu"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:91
 #: ../data/info.febvre.Komikku.appdata.xml.in:128
@@ -102,7 +102,7 @@ msgstr "[Serwery] MangaKawaii: aktualizacja"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:92
 msgid "[L10n] Update French and Polish translations"
-msgstr ""
+msgstr "[L10n] Zaktualizowano francuskie i polskie tłumaczenia"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:99
 msgid "[Servers] Add Asura Scans [EN, TR]"
@@ -1387,7 +1387,7 @@ msgstr "Menedżer pobierania"
 
 #: ../data/ui/application_window.ui:255 ../data/ui/menu/main.xml:19
 msgid "History"
-msgstr ""
+msgstr "Historia"
 
 #: ../data/ui/application_window.ui:290
 msgid "Toggle category sidebar"
@@ -1480,7 +1480,7 @@ msgstr "Ostatni rozdział"
 
 #: ../data/ui/history.ui:87
 msgid "No history"
-msgstr ""
+msgstr "Brak historii"
 
 #: ../data/ui/menu/card.xml:7
 #: ../data/ui/menu/download_manager_selection_mode.xml:7
@@ -1932,15 +1932,15 @@ msgstr "Dodaj do biblioteki"
 
 #: ../komikku/history.py:125
 msgid "Today"
-msgstr ""
+msgstr "Dzisiaj"
 
 #: ../komikku/history.py:127
 msgid "Yesterday"
-msgstr ""
+msgstr "Wczoraj"
 
 #: ../komikku/history.py:129
 msgid "%Y-%m-%d"
-msgstr ""
+msgstr "%Y-%m-%d"
 
 #: ../komikku/library.py:250
 msgid "Are you sure you want to delete selected mangas?"
@@ -2187,27 +2187,27 @@ msgstr "Już nie istnieje."
 
 #: ../komikku/servers/mangadex/__init__.py:56
 msgid "Rating"
-msgstr ""
+msgstr "Ocena"
 
 #: ../komikku/servers/mangadex/__init__.py:57
 msgid "Content ratings to include in search"
-msgstr ""
+msgstr "Oceny zawartości do zawarcia podczas wyszukiwania"
 
 #: ../komikku/servers/mangadex/__init__.py:60
 msgid "Safe"
-msgstr ""
+msgstr "Bezpieczne"
 
 #: ../komikku/servers/mangadex/__init__.py:61
 msgid "Suggestive"
-msgstr ""
+msgstr "Sugestywne"
 
 #: ../komikku/servers/mangadex/__init__.py:62
 msgid "Erotica"
-msgstr ""
+msgstr "Erotyczne"
 
 #: ../komikku/servers/mangadex/__init__.py:63
 msgid "Pornographic"
-msgstr ""
+msgstr "Pornograficzne"
 
 #: ../komikku/servers/multi/manga_stream.py:44
 msgid "Type"
