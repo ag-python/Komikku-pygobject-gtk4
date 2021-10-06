@@ -283,6 +283,7 @@ class BasePager:
         chapter.update(dict(
             pages=chapter.pages,
             last_page_read_index=page.index,
+            last_read=datetime.datetime.utcnow(),
             read=chapter_is_read,
             recent=0,
         ))

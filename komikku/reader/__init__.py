@@ -20,8 +20,9 @@ from komikku.utils import is_flatpak
 
 
 class Reader:
-    manga = None
+    came_from = None
     chapters_consulted = None
+    manga = None
     pager = None
 
     def __init__(self, window):
@@ -125,6 +126,7 @@ class Reader:
         self.window.application.add_action(self.save_page_action)
 
     def init(self, manga, chapter):
+        self.came_from = self.window.page
         self.manga = manga
 
         # Reset list of chapters consulted

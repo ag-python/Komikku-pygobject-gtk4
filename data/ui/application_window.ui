@@ -248,6 +248,20 @@
                         <property name="position">6</property>
                       </packing>
                     </child>
+                    <child>
+                      <object class="GtkLabel" id="history_title_label">
+                        <property name="visible">True</property>
+                        <property name="can-focus">False</property>
+                        <property name="label" translatable="yes">History</property>
+                        <style>
+                          <class name="title"/>
+                        </style>
+                      </object>
+                      <packing>
+                        <property name="name">history</property>
+                        <property name="position">7</property>
+                      </packing>
+                    </child>
                   </object>
                 </child>
                 <child>
@@ -440,6 +454,25 @@
                       <packing>
                         <property name="name">explorer.servers</property>
                         <property name="position">6</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkToggleButton" id="history_search_button">
+                        <property name="visible">True</property>
+                        <property name="can-focus">True</property>
+                        <property name="receives-default">True</property>
+                        <property name="tooltip-text" translatable="yes">Search</property>
+                        <child>
+                          <object class="GtkImage">
+                            <property name="visible">True</property>
+                            <property name="can-focus">False</property>
+                            <property name="icon-name">edit-find-symbolic</property>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="name">history</property>
+                        <property name="position">7</property>
                       </packing>
                     </child>
                   </object>

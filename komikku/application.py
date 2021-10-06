@@ -27,6 +27,7 @@ from komikku.categories_editor import CategoriesEditor
 from komikku.downloader import Downloader
 from komikku.downloader import DownloadManager
 from komikku.explorer import Explorer
+from komikku.history import History
 from komikku.library import Library
 from komikku.models import backup_db
 from komikku.models import Settings
@@ -215,6 +216,8 @@ class ApplicationWindow(Handy.ApplicationWindow):
     explorer_search_page_server_website_button = Gtk.Template.Child('explorer_search_page_server_website_button')
     explorer_card_page_add_read_button = Gtk.Template.Child('explorer_card_page_add_read_button')
 
+    history_search_button = Gtk.Template.Child('history_search_button')
+
     preferences_subtitle_label = Gtk.Template.Child('preferences_subtitle_label')
 
     notification_label = Gtk.Template.Child('notification_label')
@@ -314,6 +317,7 @@ class ApplicationWindow(Handy.ApplicationWindow):
         self.categories_editor = CategoriesEditor(self)
         self.download_manager = DownloadManager(self)
         self.explorer = Explorer(self)
+        self.history = History(self)
         self.preferences = Preferences(self)
 
         # Window
@@ -468,11 +472,15 @@ class ApplicationWindow(Handy.ApplicationWindow):
         """
         Go back navigation with <Escape> key:
         - Library <- Manga <- Reader
+        - Library <- History <- Reader
+        - Library <- History <- Card <- Reader
+
         - Explorer: Library <- Servers <- Search <- Card
         - Preferences: Library <- Page <- Subpage
         - Categories Editor: Library <-
+
         - Exit selection mode: Library, Card chapters, Download Manager
-        - Exit search mode: Library, Explorer 'servers' and 'search' pages
+        - Exit search mode: Library, Explorer 'servers' and 'search' pages, History
         """
         if event.keyval == Gdk.KEY_Escape:
             self.on_left_button_clicked()
@@ -501,16 +509,23 @@ class ApplicationWindow(Handy.ApplicationWindow):
                 self.card.leave_selection_mode()
             else:
                 self.card.stop_populate()
-                self.library.show(invalidate_sort=True)
+
+                if self.card.came_from == 'library':
+                    self.library.show(invalidate_sort=True)
+                elif self.card.came_from == 'history':
+                    self.history.show()
 
         elif self.page == 'reader':
             self.reader.remove_pager()
             self.set_unfullscreen()
 
-            # Refresh to update all previously chapters consulted (last page read may have changed)
-            # and update info like disk usage
-            self.card.refresh(self.reader.chapters_consulted)
-            self.card.show()
+            if self.reader.came_from == 'card':
+                # Refresh to update all previously chapters consulted (last page read may have changed)
+                # and update info like disk usage
+                self.card.refresh(self.reader.chapters_consulted)
+                self.card.show()
+            elif self.reader.came_from == 'history':
+                self.history.show()
 
         elif self.page == 'categories_editor':
             self.library.show()
@@ -523,6 +538,9 @@ class ApplicationWindow(Handy.ApplicationWindow):
 
         elif self.page == 'explorer':
             self.explorer.navigate_back(source)
+
+        elif self.page == 'history':
+            self.history.navigate_back(source)
 
         elif self.page == 'preferences':
             self.preferences.navigate_back(source)
@@ -610,10 +628,10 @@ class ApplicationWindow(Handy.ApplicationWindow):
 
         if not transition:
             transition_type = Gtk.StackTransitionType.NONE
-        elif name in ('categories_editor', 'download_manager', 'explorer', 'preferences'):
+        elif name in ('categories_editor', 'download_manager', 'explorer', 'history', 'preferences'):
             transition_type = Gtk.StackTransitionType.SLIDE_RIGHT
         else:
-            if self.page in ('categories_editor', 'download_manager', 'explorer', 'preferences'):
+            if self.page in ('categories_editor', 'download_manager', 'explorer', 'history', 'preferences'):
                 transition_type = Gtk.StackTransitionType.SLIDE_LEFT
             else:
                 transition_type = self.stack.get_transition_type()
