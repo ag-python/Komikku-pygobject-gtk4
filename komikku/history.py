@@ -112,21 +112,28 @@ class History(Gtk.Box):
             today = datetime.date.today()
             yesterday = today - datetime.timedelta(days=1)
 
-            date = None
+            current_date = None
+            current_manga_id = None
             for record in records:
                 chapter = Chapter.get(record['id'])
+                date_changed = current_date is None or current_date != chapter.last_read.date()
+
+                if not date_changed and current_manga_id and chapter.manga.id == current_manga_id:
+                    continue
+
+                current_manga_id = chapter.manga.id
 
                 # Create new Box (Label + ListBox) when date change
-                if date is None or date != chapter.last_read.date():
+                if date_changed:
+                    current_date = chapter.last_read.date()
                     box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 
-                    date = chapter.last_read.date()
-                    if date == today:
+                    if current_date == today:
                         label = _('Today')
-                    elif date == yesterday:
+                    elif current_date == yesterday:
                         label = _('Yesterday')
                     else:
-                        label = date.strftime(_('%Y-%m-%d'))
+                        label = current_date.strftime(_('%Y-%m-%d'))
                     label = Gtk.Label(label=label, xalign=0, margin=6)
                     label.get_style_context().add_class('title-4')
                     label.get_style_context().add_class('dim-label')
