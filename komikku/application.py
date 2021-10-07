@@ -510,7 +510,7 @@ class ApplicationWindow(Handy.ApplicationWindow):
             else:
                 self.card.stop_populate()
 
-                if self.card.came_from == 'library':
+                if self.card.came_from in ('library', 'explorer'):
                     self.library.show(invalidate_sort=True)
                 elif self.card.came_from == 'history':
                     self.history.show()
