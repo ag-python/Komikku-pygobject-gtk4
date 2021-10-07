@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Komikku 0.19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-10-06 22:35+0200\n"
-"PO-Revision-Date: 2021-09-29 19:22+0200\n"
+"PO-Revision-Date: 2021-10-07 10:33+0200\n"
 "Last-Translator: Liliana Prikler <liliana.prikler@gmail.com>\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -81,11 +81,11 @@ msgstr "Valéry Febvre"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:89
 msgid "[Servers] MANGA Plus by SHUEISHA: Update"
-msgstr ""
+msgstr "[Server] MANGA Pls by SHUEISHA: Aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:90
 msgid "[Servers] Mangahub: Fixed bug when summary is missing"
-msgstr ""
+msgstr "[Server] Mangahub: Fehler bei fehlender Zusammenfassung behoben"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:91
 #: ../data/info.febvre.Komikku.appdata.xml.in:128
@@ -98,51 +98,51 @@ msgstr "[Server] MangaKawaii: Aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:92
 msgid "[L10n] Update French and Polish translations"
-msgstr ""
+msgstr "[L10n] Französische und Polnische Übersetzung aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:99
 msgid "[Servers] Add Asura Scans [EN, TR]"
-msgstr ""
+msgstr "[Server] Asura Scans (EN, TR) hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:100
 msgid "[Servers] Add FR Scan [FR]"
-msgstr ""
+msgstr "[Servers] FR Scan (FR) hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:101
 msgid "[Servers] Add Lelscan-VF [FR]"
-msgstr ""
+msgstr "[Server] Lelscan-VF (FR) hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:102
 msgid "[Servers] Add Leomanga [ES]"
-msgstr ""
+msgstr "[Server] Leomanga (ES) hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:103
 msgid "[Servers] Add Phoenix Fansub [ES]"
-msgstr ""
+msgstr "[Server] Phoenix Fansub (ES) hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:104
 msgid "[Servers] Add Mangadoor [ES]"
-msgstr ""
+msgstr "[Server] Mangadoor (ES) hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:105
 msgid "[Servers] Add Mangas.in [ES]"
-msgstr ""
+msgstr "[Server] Mangas.in (ES) hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:106
 msgid "[Servers] Add Scan FR [FR]"
-msgstr ""
+msgstr "[Server] Scan FR (FR) hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:107
 msgid "[Servers] Add Scan OP [FR]"
-msgstr ""
+msgstr "[Server] Scan OP (FR) hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:108
 msgid "[Servers] Bilibili: Update"
-msgstr ""
+msgstr "[Server] Bilibili: Aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:109
 msgid "[Servers] Jpmangas: Update"
-msgstr ""
+msgstr "[Server] Jpmangas: Aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:110
 #: ../data/info.febvre.Komikku.appdata.xml.in:350
@@ -162,7 +162,7 @@ msgstr "[Leser] Fehler im Slider zur Seitenauswahl behoben"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:125
 msgid "[Servers] Add MangaKawaii [EN]"
-msgstr "[Server] MangaKawaii [EN] hinzugefügt"
+msgstr "[Server] MangaKawaii (EN) hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:126
 msgid "[Servers] Guya: Update"
@@ -212,15 +212,15 @@ msgstr "[Explorer] Zeige angeheftete Server nicht, wenn es keine gibt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:142
 msgid "[Servers] Add Best Manga [RU]"
-msgstr "[Server] Best Manga [EN] hinzugefügt"
+msgstr "[Server] Best Manga (EN) hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:143
 msgid "[Servers] Add Bilibili [EN]"
-msgstr "[Server] Bilibili [EN] hinzugefügt"
+msgstr "[Server] Bilibili (EN) hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:144
 msgid "[Servers] Add Tapas [EN]"
-msgstr "[Server] Tapas [EN] hinzugefügt"
+msgstr "[Server] Tapas (EN) hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:145
 #: ../data/info.febvre.Komikku.appdata.xml.in:166
@@ -1376,34 +1376,36 @@ msgstr "Einstellungen"
 msgid "Download Manager"
 msgstr "Download-Manager"
 
+# Both "history" and "story" translate to the German "Geschichte", so the reverse would be unclear.
 #: ../data/ui/application_window.ui:255 ../data/ui/menu/main.xml:19
 msgid "History"
-msgstr ""
+msgstr "Zuletzt gelesen"
 
+# "Toggle" could be translated as "umschalten", but that's a rather weird word to use.  One translation per state would be better here.
 #: ../data/ui/application_window.ui:290
 msgid "Toggle category sidebar"
-msgstr ""
+msgstr "Kategorien"
 
 #: ../data/ui/application_window.ui:310
 msgid "Menu"
-msgstr ""
+msgstr "Menü"
 
 #: ../data/ui/application_window.ui:333 ../data/ui/application_window.ui:445
 #: ../data/ui/application_window.ui:464
 msgid "Search"
-msgstr ""
+msgstr "Suche"
 
 #: ../data/ui/application_window.ui:351
 msgid "Resume read"
-msgstr ""
+msgstr "Weiterlesen"
 
 #: ../data/ui/application_window.ui:370
 msgid "Toggle fullscreen mode"
-msgstr ""
+msgstr "Vollbildmodus"
 
 #: ../data/ui/application_window.ui:389
 msgid "Start/Stop download"
-msgstr ""
+msgstr "Download starten/anhalten"
 
 #: ../data/ui/application_window.ui:408 ../data/ui/menu/card.xml:60
 msgid "Open in Browser"
@@ -1470,9 +1472,10 @@ msgstr "Keine Downloads"
 msgid "Last Chapter"
 msgstr "Letztes Kapitel"
 
+# Again, avoid "Geschichte"
 #: ../data/ui/history.ui:87
 msgid "No history"
-msgstr ""
+msgstr "Nichts vorhanden"
 
 #: ../data/ui/menu/card.xml:7
 #: ../data/ui/menu/download_manager_selection_mode.xml:7
@@ -1830,7 +1833,7 @@ msgstr "Konnte Manga-URL nicht feststellen"
 #: ../komikku/history.py:203 ../komikku/library.py:288
 #: ../komikku/preferences.py:265
 msgid "Back"
-msgstr ""
+msgstr "Zurück"
 
 #: ../komikku/card.py:605
 msgid "New"
@@ -1890,7 +1893,7 @@ msgstr "Manga {0} hinzugefügt"
 
 #: ../komikku/explorer.py:338 ../komikku/explorer.py:709
 msgid "Read"
-msgstr ""
+msgstr "Lesen"
 
 #: ../komikku/explorer.py:383
 msgid "Oops, server website URL is unknown."
@@ -1922,19 +1925,19 @@ msgstr "Servers"
 
 #: ../komikku/explorer.py:712
 msgid "Add to library"
-msgstr ""
+msgstr "Zu Bibliothek hinzufügen"
 
 #: ../komikku/history.py:125
 msgid "Today"
-msgstr ""
+msgstr "Heute"
 
 #: ../komikku/history.py:127
 msgid "Yesterday"
-msgstr ""
+msgstr "Gestern"
 
 #: ../komikku/history.py:129
 msgid "%Y-%m-%d"
-msgstr ""
+msgstr "%d.%m.%Y"
 
 #: ../komikku/library.py:250
 msgid "Are you sure you want to delete selected mangas?"
@@ -1942,7 +1945,7 @@ msgstr "Sind Sie sicher, dass sie die gewählten Manga löschen wollen?"
 
 #: ../komikku/library.py:308 ../komikku/library.py:513
 msgid "Add new comic"
-msgstr ""
+msgstr "Hinzufügen"
 
 #: ../komikku/library.py:602
 msgid "Library"
@@ -2171,7 +2174,7 @@ msgstr "Fehler: {}"
 
 #: ../komikku/servers/exceptions.py:16
 msgid "Failed to bypass Cloudflare protection. Please try again."
-msgstr ""
+msgstr "Cloudflare-Herausforderung gescheitert. Bitte versuchen Sie es erneut."
 
 #: ../komikku/servers/exceptions.py:21
 msgid "No longer exists."
@@ -2179,27 +2182,27 @@ msgstr "Existiert nicht mehr."
 
 #: ../komikku/servers/mangadex/__init__.py:56
 msgid "Rating"
-msgstr ""
+msgstr "Einstufung"
 
 #: ../komikku/servers/mangadex/__init__.py:57
 msgid "Content ratings to include in search"
-msgstr ""
+msgstr "Inhalte, nach denen gesucht werden soll"
 
 #: ../komikku/servers/mangadex/__init__.py:60
 msgid "Safe"
-msgstr ""
+msgstr "Sicher"
 
 #: ../komikku/servers/mangadex/__init__.py:61
 msgid "Suggestive"
-msgstr ""
+msgstr "Suggestiv"
 
 #: ../komikku/servers/mangadex/__init__.py:62
 msgid "Erotica"
-msgstr ""
+msgstr "Erotisch"
 
 #: ../komikku/servers/mangadex/__init__.py:63
 msgid "Pornographic"
-msgstr ""
+msgstr "Pornographisch"
 
 #: ../komikku/servers/multi/manga_stream.py:44
 msgid "Type"
@@ -2273,28 +2276,8 @@ msgstr "Sie sind zurzeit offline"
 msgid "No Internet connection, timeout or server down"
 msgstr "Keine Internetverbindung, Timeout oder Serverfehler"
 
-#~ msgid "Failed to bypass Cloudfare protection. Please try again."
-#~ msgstr ""
-#~ "Cloudflare-Herausforderung gescheitert. Bitte versuchen Sie es erneut."
-
-#~ msgid ""
-#~ "Komikku is a manga, manhwa, manhua, webtoons, webcomics and comics reader "
-#~ "for GNOME. It focuses on providing a clean, intuitive and adaptive "
-#~ "interface."
-#~ msgstr ""
-#~ "Komikku ist ein Reader für Manga, Manhwa, Manhua, Webtoons, Webcomics und "
-#~ "Comics.\n"
-#~ "Die Benutzeroberfläche orientiert sich an GNOME-Standards, um möglichst "
-#~ "klar und intuitiv zu sein."
-
-#~ msgid "[Servers] Read Manga server: Update"
-#~ msgstr "[Server] ReadManga: Aktualisiert"
-
 #~ msgid "Types of manga to search for"
 #~ msgstr "Arten von Manga, nach denen gesucht werden soll"
-
-#~ msgid "[Servers] Add Magical Translators [EN/ES]"
-#~ msgstr "[Server] Magical Translators (EN/ES) hinzugefügt"
 
 #~ msgctxt "Shortcut window description"
 #~ msgid "Keyboard Shortcuts"
