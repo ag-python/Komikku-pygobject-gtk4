@@ -116,7 +116,9 @@ class History(Gtk.Box):
             current_manga_id = None
             for record in records:
                 chapter = Chapter.get(record['id'])
-                date_changed = current_date is None or current_date != chapter.last_read.date()
+                # Convert chapter's last read date in local timezone
+                last_read = chapter.last_read.replace(tzinfo=pytz.UTC).astimezone(local_timezone)
+                date_changed = current_date is None or current_date != last_read.date()
 
                 if not date_changed and current_manga_id and chapter.manga.id == current_manga_id:
                     continue
@@ -125,7 +127,7 @@ class History(Gtk.Box):
 
                 # Create new Box (Label + ListBox) when date change
                 if date_changed:
-                    current_date = chapter.last_read.date()
+                    current_date = last_read.date()
                     box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL)
 
                     if current_date == today:
@@ -173,7 +175,6 @@ class History(Gtk.Box):
                 action_row.add_prefix(Gtk.Image.new_from_pixbuf(pixbuf))
 
                 # Time
-                last_read = chapter.last_read.replace(tzinfo=pytz.UTC).astimezone(local_timezone)
                 label = Gtk.Label(label=last_read.strftime('%H:%M'))
                 label.get_style_context().add_class('subtitle')
                 action_row.add(label)
