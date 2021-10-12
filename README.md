@@ -24,6 +24,7 @@ Komikku is licensed under the [GPLv3+](https://www.gnu.org/licenses/gpl-3.0.html
   * Swipe gesture (touch screen)
 * Automatic update of comics
 * Automatic download of new chapters
+* Reading history
 * Light and dark themes
 
 ## Screenshot
