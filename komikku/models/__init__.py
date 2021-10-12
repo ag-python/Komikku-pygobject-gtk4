@@ -4,6 +4,7 @@
 
 from .database import backup_db
 from .database import Category
+from .database import CategoryVirtual
 from .database import Chapter
 from .database import create_db_connection
 from .database import delete_rows

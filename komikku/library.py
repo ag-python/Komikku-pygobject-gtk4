@@ -20,6 +20,7 @@ from gi.repository.GdkPixbuf import Pixbuf
 from gi.repository.GdkPixbuf import PixbufAnimation
 
 from komikku.models import Category
+from komikku.models import CategoryVirtual
 from komikku.models import create_db_connection
 from komikku.models import delete_rows
 from komikku.models import insert_rows
@@ -345,7 +346,7 @@ class Library:
         return self.searchbar.handle_event(event)
 
     def on_manga_added(self, manga):
-        """Called from 'Add dialog' when user clicks on [+] button"""
+        """Called from 'Explorer' when user clicks on [+] button"""
         db_conn = create_db_connection()
         nb_mangas = db_conn.execute('SELECT count(*) FROM mangas').fetchone()[0]
         db_conn.close()
@@ -353,7 +354,9 @@ class Library:
         if nb_mangas == 1:
             # Library was previously empty
             self.populate()
-        else:
+        elif Settings.get_default().selected_category in list(CategoryVirtual):
+            # It's not necessary to add the manga if a real category is selected
+            # New manga have no categories defined
             self.add_manga(manga, position=0)
 
     def on_manga_clicked(self, _flowbox, thumbnail):
@@ -457,22 +460,22 @@ class Library:
         self.update_subtitle(db_conn=db_conn)
 
         selected_category_id = Settings.get_default().selected_category
-        if selected_category_id > 0:
-            # A true (from DB) category is selected
+        if selected_category_id not in list(CategoryVirtual):
+            # A real (from DB) category is selected
             mangas_rows = db_conn.execute(
                 'SELECT m.id FROM categories_mangas_association cma JOIN mangas m ON cma.manga_id = m.id WHERE cma.category_id = ? ORDER BY m.last_read DESC',
                 (selected_category_id,)
             ).fetchall()
-        elif selected_category_id == -1:
+        elif selected_category_id == CategoryVirtual.UNCATEGORIZED:
             # Virtual category 'Uncategorized' is selected
             mangas_rows = db_conn.execute(
                 'SELECT id FROM mangas WHERE id not in (SELECT manga_id FROM categories_mangas_association) ORDER BY last_read DESC'
             ).fetchall()
         else:
-            # Virtual category 'All' is selected
+            # Virtual category 'ALL' is selected
             mangas_rows = db_conn.execute('SELECT id FROM mangas ORDER BY last_read DESC').fetchall()
 
-        if len(mangas_rows) == 0 and selected_category_id == 0:
+        if len(mangas_rows) == 0 and selected_category_id == CategoryVirtual.ALL:
             # Display start page
             self.show_page('start_page')
 
@@ -600,8 +603,8 @@ class Library:
             subtitle = n_('{0} selected', '{0} selected', nb_selected).format(nb_selected)
         else:
             subtitle = _('Library')
-            if (category_id := Settings.get_default().selected_category) != 0:
-                if category_id == -1:
+            if (category_id := Settings.get_default().selected_category) != CategoryVirtual.ALL:
+                if category_id == CategoryVirtual.UNCATEGORIZED:
                     subtitle = '{0} / {1}'.format(subtitle, _('Uncategorized'))
                 else:
                     subtitle = f'{subtitle} / {Category.get(category_id, db_conn).label}'
@@ -770,7 +773,7 @@ class CategoriesList(GObject.GObject):
 
                 self.listbox.add(row)
         else:
-            Settings.get_default().selected_category = 0
+            Settings.get_default().selected_category = CategoryVirtual.ALL
             self.stack.set_visible_child_name('empty')
 
         if refresh_library:
