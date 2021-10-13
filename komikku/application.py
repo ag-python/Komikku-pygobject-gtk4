@@ -46,6 +46,7 @@ CREDITS = dict(
         'ISO-morphism',
         'jaskaranSM',
         'Amelia Joison (amnetrine)',
+        'David Keller (BlobCodes)',
         'Mariusz Kurek',
         'Liliana Prikler',
         'Romain Vaudois',
