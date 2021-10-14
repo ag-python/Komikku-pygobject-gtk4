@@ -286,6 +286,9 @@ class Mangadex(Server):
             for chapter in results:
                 attributes = chapter['attributes']
 
+                if 'externalUrl' in attributes and attributes['externalUrl']:
+                    continue
+
                 title = f'#{attributes["chapter"]}'
                 if attributes['title']:
                     title = f'{title} - {attributes["title"]}'
@@ -295,7 +298,6 @@ class Mangadex(Server):
                 data = dict(
                     slug=chapter['id'],
                     title=title,
-                    pages=[dict(slug=attributes['hash'] + '/' + page, image=None) for page in attributes['data']],
                     date=convert_date_string(attributes['publishAt'].split('T')[0], format='%Y-%m-%d'),
                     scanlators=scanlators,
                 )
