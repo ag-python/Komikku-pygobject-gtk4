@@ -12,5 +12,6 @@
   * Swipe gesture (touch screen)
 * Automatic update of comics
 * Automatic download of new chapters
+* Reading history
 * Light and dark themes
 * Build in mind to be adaptive (able to scale from desktop workstations to mobile phones)
