@@ -73,8 +73,10 @@ class CategoriesEditor(Handy.Clamp):
             # If category is current selected category in Library, reset selected category
             if deleted_is_current:
                 Settings.get_default().selected_category = CategoryVirtual.ALL
+                self.window.library.update_subtitle()
+                self.window.library.flowbox.invalidate_filter()
 
-            self.window.library.categories_list.populate(refresh_library=deleted_is_current)
+            self.window.library.categories_list.populate()
 
         self.window.confirm(
             _('Delete?'),

@@ -277,7 +277,7 @@ class CategoriesList:
 
         # Update Library if the current selected category is the activated category or the 'Uncategorized' category
         if Settings.get_default().selected_category in (CategoryVirtual.UNCATEGORIZED, category_id):
-            self.window.library.populate()
+            self.window.library.flowbox.invalidate_filter()
 
 
 class ChaptersList:

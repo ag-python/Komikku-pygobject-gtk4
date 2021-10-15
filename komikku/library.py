@@ -91,24 +91,36 @@ class Library:
 
         def _filter(thumbnail):
             manga = thumbnail.manga
-            term = self.search_entry.get_text().lower()
+            selected_category = Settings.get_default().selected_category
 
-            # Search in name
-            ret = term in manga.name.lower()
+            ret = True
+            if selected_category != CategoryVirtual.ALL:
+                if selected_category == CategoryVirtual.UNCATEGORIZED:
+                    # Uncategorized
+                    ret = not manga.categories
+                else:
+                    # Categorized
+                    ret = selected_category in manga.categories
 
-            # Search in server name
-            ret = ret or term in manga.server.name.lower()
+            if ret:
+                term = self.search_entry.get_text().lower()
 
-            # Search in genres (exact match)
-            ret = ret or term in [genre.lower() for genre in manga.genres]
+                # Search in name
+                ret = term in manga.name.lower()
 
-            # Optional menu filters
-            if ret and self.search_menu_filters.get('downloaded'):
-                ret = manga.nb_downloaded_chapters > 0
-            if ret and self.search_menu_filters.get('unread'):
-                ret = manga.nb_unread_chapters > 0
-            if ret and self.search_menu_filters.get('recents'):
-                ret = manga.nb_recent_chapters > 0
+                # Search in server name
+                ret = ret or term in manga.server.name.lower()
+
+                # Search in genres (exact match)
+                ret = ret or term in [genre.lower() for genre in manga.genres]
+
+                # Optional menu filters
+                if ret and self.search_menu_filters.get('downloaded'):
+                    ret = manga.nb_downloaded_chapters > 0
+                if ret and self.search_menu_filters.get('unread'):
+                    ret = manga.nb_unread_chapters > 0
+                if ret and self.search_menu_filters.get('recents'):
+                    ret = manga.nb_recent_chapters > 0
 
             if not ret and thumbnail._selected:
                 # Unselect thumbnail if it's selected
@@ -236,13 +248,11 @@ class Library:
             # Safely delete mangas in DB
             for thumbnail in self.flowbox.get_selected_children():
                 thumbnail.manga.delete()
+                thumbnail.destroy()
 
             # Restart Downloader & Updater
             self.window.downloader.start()
             self.window.updater.start()
-
-            # Finally, update library
-            self.populate()
 
             self.leave_selection_mode()
 
@@ -290,7 +300,7 @@ class Library:
         self.window.left_button_image.set_from_icon_name('go-previous-symbolic', Gtk.IconSize.BUTTON)
         self.window.menu_button.set_menu_model(self.builder.get_object('menu-library-selection-mode'))
 
-    def leave_selection_mode(self, param=None):
+    def leave_selection_mode(self):
         self.selection_mode = False
 
         if self.page == 'flowbox':
@@ -302,8 +312,7 @@ class Library:
             thumbnail._selected = False
 
         if self.categories_list.edit_mode:
-            refresh_library = param == 'refresh_library'
-            self.categories_list.leave_edit_mode(refresh_library=refresh_library)
+            self.categories_list.leave_edit_mode()
 
         self.window.headerbar.get_style_context().remove_class('selection-mode')
         self.window.left_button.set_tooltip_text(_('Add new comic'))
@@ -459,23 +468,8 @@ class Library:
 
         self.update_subtitle(db_conn=db_conn)
 
-        selected_category_id = Settings.get_default().selected_category
-        if selected_category_id not in list(CategoryVirtual):
-            # A real (from DB) category is selected
-            mangas_rows = db_conn.execute(
-                'SELECT m.id FROM categories_mangas_association cma JOIN mangas m ON cma.manga_id = m.id WHERE cma.category_id = ? ORDER BY m.last_read DESC',
-                (selected_category_id,)
-            ).fetchall()
-        elif selected_category_id == CategoryVirtual.UNCATEGORIZED:
-            # Virtual category 'Uncategorized' is selected
-            mangas_rows = db_conn.execute(
-                'SELECT id FROM mangas WHERE id not in (SELECT manga_id FROM categories_mangas_association) ORDER BY last_read DESC'
-            ).fetchall()
-        else:
-            # Virtual category 'ALL' is selected
-            mangas_rows = db_conn.execute('SELECT id FROM mangas ORDER BY last_read DESC').fetchall()
-
-        if len(mangas_rows) == 0 and selected_category_id == CategoryVirtual.ALL:
+        mangas_rows = db_conn.execute('SELECT id FROM mangas ORDER BY last_read DESC').fetchall()
+        if len(mangas_rows) == 0:
             # Display start page
             self.show_page('start_page')
 
@@ -638,10 +632,10 @@ class CategoriesList(GObject.GObject):
         self.library.flap.set_reveal_flap(True)
         self.library.flap.set_modal(True)
 
-    def leave_edit_mode(self, refresh_library=False):
+    def leave_edit_mode(self):
         self.library.flap.set_reveal_flap(False)
 
-        self.populate(refresh_library=refresh_library)
+        self.populate()
 
     def on_category_activated(self, _listbox, row):
         if self.edit_mode:
@@ -652,7 +646,8 @@ class CategoriesList(GObject.GObject):
         self.listbox.unselect_all()
         self.listbox.select_row(row)
 
-        self.library.populate()
+        self.library.update_subtitle()
+        self.library.flowbox.invalidate_filter()
 
     def on_edit_mode_cancel_button_clicked(self, _button):
         self.library.flap.set_reveal_flap(False)
@@ -703,8 +698,11 @@ class CategoriesList(GObject.GObject):
 
         def complete():
             self.library.window.activity_indicator.stop()
-            # Leave library section mode, leave edit mode and refresh library
-            self.library.leave_selection_mode('refresh_library')
+
+            # Leave library section mode (also leave edit mode) and refresh library
+            self.library.leave_selection_mode()
+            self.leave_edit_mode()
+            self.library.flowbox.invalidate_filter()
 
         self.library.window.activity_indicator.start()
 
@@ -712,7 +710,7 @@ class CategoriesList(GObject.GObject):
         thread.daemon = True
         thread.start()
 
-    def populate(self, edit_mode=False, refresh_library=False):
+    def populate(self, edit_mode=False):
         db_conn = create_db_connection()
         categories = db_conn.execute('SELECT * FROM categories ORDER BY label ASC').fetchall()
         nb_categorized = db_conn.execute('SELECT count(*) FROM categories_mangas_association').fetchone()[0]
@@ -742,13 +740,13 @@ class CategoriesList(GObject.GObject):
                     if edit_mode:
                         continue
 
-                    category = 0
+                    category = CategoryVirtual.ALL
                     label = _('All')
                 elif item == 'uncategorized':
                     if edit_mode:
                         continue
 
-                    category = -1
+                    category = CategoryVirtual.UNCATEGORIZED
                     label = _('Uncategorized')
                 else:
                     category = Category.get(item['id'])
@@ -775,9 +773,6 @@ class CategoriesList(GObject.GObject):
         else:
             Settings.get_default().selected_category = CategoryVirtual.ALL
             self.stack.set_visible_child_name('empty')
-
-        if refresh_library:
-            self.library.populate()
 
 
 class Thumbnail(Gtk.FlowBoxChild):
