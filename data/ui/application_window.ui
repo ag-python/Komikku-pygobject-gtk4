@@ -1493,7 +1493,7 @@
                           </packing>
                         </child>
                         <child>
-                          <object class="GtkScrolledWindow">
+                          <object class="GtkScrolledWindow" id="card_chapters_scrolled_window">
                             <property name="visible">True</property>
                             <property name="can-focus">True</property>
                             <child>
