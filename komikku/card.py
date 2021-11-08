@@ -291,14 +291,11 @@ class ChaptersList:
         self.window = card.window
 
         self.listbox = self.window.card_chapters_listbox
+        self.listbox.set_focus_vadjustment(self.window.card_chapters_scrolledwindow.get_vadjustment())
         self.listbox.connect('key-press-event', self.on_key_pressed)
         self.listbox.connect('row-activated', self.on_chapter_row_activated)
         self.listbox.connect('selected-rows-changed', self.on_selection_changed)
-        self.listbox.connect('set-focus-child', self.on_child_focus)
         self.listbox.connect('unselect-all', self.card.leave_selection_mode)
-
-        vadj = self.window.card_chapters_scrolled_window.get_vadjustment()
-        self.listbox.set_focus_vadjustment(vadj)
 
         self.gesture = Gtk.GestureLongPress.new(self.listbox)
         self.gesture.set_touch_only(False)
@@ -428,24 +425,19 @@ class ChaptersList:
         else:
             self.card.enter_selection_mode()
 
-    def on_child_focus(self, _box, row):
-        if row and not self.card.selection_mode:
-            self.selection_mode_last_row_index = row.get_index()
-
     def on_key_pressed(self, _widget, event):
+        modifiers = Gtk.accelerator_get_default_mod_mask()
+
         if not self.card.selection_mode:
-            modifiers = Gtk.accelerator_get_default_mod_mask()
             if event.state & modifiers & Gdk.ModifierType.SHIFT_MASK:
-                index_from_focus = self.selection_mode_last_row_index
                 self.card.enter_selection_mode()
-                self.selection_mode_last_row_index = index_from_focus
+                self.selection_mode_last_row_index = self.listbox.get_focus_child().get_index()
             else:
                 return Gdk.EVENT_PROPAGATE
 
         if event.keyval not in (Gdk.KEY_Up, Gdk.KEY_KP_Up, Gdk.KEY_Down, Gdk.KEY_KP_Down):
             return Gdk.EVENT_STOP
 
-        modifiers = Gtk.accelerator_get_default_mod_mask()
         is_single = event.state & modifiers != Gdk.ModifierType.SHIFT_MASK
         walk_index = self.selection_mode_last_row_index
         walk_row = None
