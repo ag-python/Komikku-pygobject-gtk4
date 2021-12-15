@@ -382,6 +382,15 @@ class ApplicationWindow(Handy.ApplicationWindow):
         self.notification_revealer.set_reveal_child(False)
 
     def init_theme(self):
+        def set_color_scheme(force_dark):
+            if force_dark:
+                color_scheme = Handy.ColorScheme.FORCE_DARK
+            elif Handy.StyleManager.get_default().get_system_supports_color_schemes():
+                color_scheme = Handy.StyleManager.get_default().get_color_scheme()
+            else:
+                color_scheme = Handy.ColorScheme.DEFAULT
+            Handy.StyleManager.get_default().set_color_scheme(color_scheme)
+
         if Settings.get_default().night_light and not self._night_light_proxy:
             # Watch night light changes
             self._night_light_proxy = Gio.DBusProxy.new_sync(
@@ -396,22 +405,20 @@ class ApplicationWindow(Handy.ApplicationWindow):
 
             def property_changed(proxy, changed_properties, invalidated_properties):
                 properties = changed_properties.unpack()
-                if 'NightLightActive' in properties.keys():
-                    Gtk.Settings.get_default().set_property('gtk-application-prefer-dark-theme', properties['NightLightActive'])
+
+                if 'NightLightActive' in properties:
+                    set_color_scheme(properties['NightLightActive'])
 
             self._night_light_handler_id = self._night_light_proxy.connect('g-properties-changed', property_changed)
 
-            Gtk.Settings.get_default().set_property(
-                'gtk-application-prefer-dark-theme',
-                self._night_light_proxy.get_cached_property('NightLightActive')
-            )
+            set_color_scheme(self._night_light_proxy.get_cached_property('NightLightActive'))
         else:
             if self._night_light_proxy and self._night_light_handler_id > 0:
                 self._night_light_proxy.disconnect(self._night_light_handler_id)
                 self._night_light_proxy = None
                 self._night_light_handler_id = 0
 
-            Gtk.Settings.get_default().set_property('gtk-application-prefer-dark-theme', Settings.get_default().dark_theme)
+            set_color_scheme(Settings.get_default().dark_theme)
 
     def on_about_menu_clicked(self, action, param):
         builder = Gtk.Builder()

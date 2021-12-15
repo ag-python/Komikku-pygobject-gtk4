@@ -68,7 +68,7 @@ Dependencies:
 * `meson` >= 0.50.0
 * `python` >= 3.8
 * `gtk` >= 3.24.1
-* `libhandy` >= 1.2.0
+* `libhandy` >= 1.5.0
 * `python-beautifulsoup4`
 * `python-brotli`
 * `python-cloudscraper`
