@@ -74,7 +74,7 @@
         </screenshot>
     </screenshots>
 
-    <developer_name>Valéry Febvre</developer_name>
+    <developer_name translatable="no">Valéry Febvre</developer_name>
     <update_contact>vfebvre@easter-eggs.com</update_contact>
 
     <url type="homepage">https://valos.gitlab.io/Komikku/</url>
