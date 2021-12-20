@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Komikku 0.30.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-10-31 10:50+0100\n"
-"PO-Revision-Date: 2021-10-31 11:22+0100\n"
+"POT-Creation-Date: 2021-12-20 21:36+0100\n"
+"PO-Revision-Date: 2021-12-20 21:37+0100\n"
 "Last-Translator: Óscar Fernández Díaz <oscfdezdz@tuta.io>\n"
 "Language-Team: Spanish\n"
 "Language: es\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:10
 msgid "Read your favorite manga online or offline"
@@ -78,10 +78,6 @@ msgstr "Temas claro y oscuro"
 #: ../data/info.febvre.Komikku.appdata.xml.in:25
 msgid "It focuses on providing a clean, intuitive and adaptive interface."
 msgstr "Centrado en ofrecer una interfaz limpia, intuitiva y adaptable."
-
-#: ../data/info.febvre.Komikku.appdata.xml.in:77
-msgid "Valéry Febvre"
-msgstr "Valéry Febvre"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:90
 msgid "[Library] Faster rendering on category changes"
@@ -860,8 +856,8 @@ msgid ""
 "[Preferences] Use Handy.PreferencesWindow subpages to display Servers "
 "Languages and Servers Settings"
 msgstr ""
-"[Preferencias] Utiliza las subpáginas de Handy.PreferencesWindow para "
-"mostrar los idiomas de los servidores y la configuración de los mismos"
+"[Preferencias] Usa las subpáginas de Handy.PreferencesWindow para mostrar "
+"los idiomas de los servidores y la configuración de los mismos"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:437
 msgid "[Library] Press &lt;Enter&gt; opens first manga in search"
@@ -1005,7 +1001,7 @@ msgstr ""
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:488
 msgid "[Library] Reduce memory used by covers"
-msgstr "[Biblioteca] Reduce la memoria utilizada por las portadas"
+msgstr "[Biblioteca] Reduce la memoria usada por las portadas"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:489
 msgid "[Servers] MangaSee: Fix manga with chapters grouped by seasons"
@@ -1522,6 +1518,11 @@ msgstr "Iniciar/Detener descarga"
 msgid "Open in Browser"
 msgstr "Abrir en el navegador"
 
+#. The umbrella sentence of the application on the first start screen
+#: ../data/ui/application_window.ui:644
+msgid "Welcome to Komikku"
+msgstr "Bienvenido/a a Komikku"
+
 #: ../data/ui/application_window.ui:658
 msgid "Discover new readings"
 msgstr "Descubra nuevas lecturas"
@@ -1651,7 +1652,7 @@ msgstr "Actualizar biblioteca"
 
 #: ../data/ui/menu/main.xml:29
 msgid "Keyboard Shortcuts"
-msgstr "Atajos de teclado"
+msgstr "Atajos del teclado"
 
 #: ../data/ui/menu/main.xml:33
 msgid "About Komikku"
@@ -1799,7 +1800,7 @@ msgstr "Permitir el almacenamiento de texto plano como alternativa"
 
 #: ../data/ui/preferences.ui:334
 msgid "Used when no keyring backends are found"
-msgstr "Se utiliza cuando no se encuentran soportes de claves"
+msgstr "Se usa cuando no se encuentran soportes de claves"
 
 #: ../data/ui/shortcuts_overview.ui:14
 msgctxt "Shortcut window description"
@@ -1883,31 +1884,31 @@ msgstr "URL inválida {}, no manejada por ningún servidor."
 msgid "Komikku"
 msgstr "Komikku"
 
-#: ../komikku/application.py:361 ../komikku/reader/__init__.py:241
+#: ../komikku/application.py:362 ../komikku/reader/__init__.py:241
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: ../komikku/application.py:361
+#: ../komikku/application.py:362
 msgid "Yes"
 msgstr "Sí"
 
-#: ../komikku/application.py:423
+#: ../komikku/application.py:431
 msgid "Contributors: Code, Patches, Debugging:"
 msgstr "Colaboradores: Código, Parches, Depuración:"
 
-#: ../komikku/application.py:451
+#: ../komikku/application.py:459
 msgid "Are you sure you want to quit?"
 msgstr "¿Está seguro de que quiere salir?"
 
-#: ../komikku/application.py:454
+#: ../komikku/application.py:462
 msgid "Some chapters are currently being downloaded."
 msgstr "Se están descargando algunos capítulos."
 
-#: ../komikku/application.py:456
+#: ../komikku/application.py:464
 msgid "Some mangas are currently being updated."
 msgstr "Se están actualizando algunos mangas."
 
-#: ../komikku/application.py:459
+#: ../komikku/application.py:467
 msgid "Quit?"
 msgstr "¿Salir?"
 
@@ -1942,33 +1943,33 @@ msgid "Failed to get manga URL"
 msgstr "Error en la obtención de la URL del manga"
 
 #: ../komikku/card.py:208 ../komikku/categories_editor.py:124
-#: ../komikku/downloader.py:490 ../komikku/explorer.py:670
+#: ../komikku/downloader.py:490 ../komikku/explorer.py:671
 #: ../komikku/history.py:211 ../komikku/library.py:299
 #: ../komikku/preferences.py:265
 msgid "Back"
 msgstr "Atrás"
 
-#: ../komikku/card.py:606
+#: ../komikku/card.py:620
 msgid "New"
 msgstr "Nuevo"
 
-#: ../komikku/card.py:622 ../komikku/card.py:924
+#: ../komikku/card.py:636 ../komikku/card.py:938
 msgid "%m/%d/%Y"
 msgstr "%d/%m/%Y"
 
-#: ../komikku/card.py:720
+#: ../komikku/card.py:734
 msgid "Reset"
 msgstr "Restablecer"
 
-#: ../komikku/card.py:722
+#: ../komikku/card.py:736
 msgid "Download"
 msgstr "Descargar"
 
-#: ../komikku/card.py:724
+#: ../komikku/card.py:738
 msgid "Mark as Read"
 msgstr "Marcar como leído"
 
-#: ../komikku/card.py:726
+#: ../komikku/card.py:740
 msgid "Mark as Unread"
 msgstr "Marcar como no leído"
 
@@ -1999,44 +2000,44 @@ msgstr "{0}/{1} páginas descargadas"
 msgid "error"
 msgstr "error"
 
-#: ../komikku/explorer.py:333
+#: ../komikku/explorer.py:334
 #, python-brace-format
 msgid "{0} manga added"
-msgstr "{0} manga añadido"
+msgstr "Manga {0} añadido"
 
-#: ../komikku/explorer.py:338 ../komikku/explorer.py:709
+#: ../komikku/explorer.py:339 ../komikku/explorer.py:710
 msgid "Read"
 msgstr "Leer"
 
-#: ../komikku/explorer.py:383
+#: ../komikku/explorer.py:384
 msgid "Oops, server website URL is unknown."
 msgstr "Ups, la URL del sitio web del servidor es desconocida."
 
-#: ../komikku/explorer.py:487
+#: ../komikku/explorer.py:488
 msgid "Oops, failed to retrieve manga's information."
 msgstr "Ups, ha fallado la recuperación de la información del manga."
 
-#: ../komikku/explorer.py:520
+#: ../komikku/explorer.py:521
 msgid "Pinned"
 msgstr "Anclado"
 
-#: ../komikku/explorer.py:618
+#: ../komikku/explorer.py:619
 msgid "MOST POPULARS"
 msgstr "MÁS POPULARES"
 
-#: ../komikku/explorer.py:651
+#: ../komikku/explorer.py:652
 msgid "Oops, search failed. Please try again."
 msgstr "Ups, la búsqueda ha fallado. Por favor, inténtelo de nuevo."
 
-#: ../komikku/explorer.py:653
+#: ../komikku/explorer.py:654
 msgid "No results"
 msgstr "Sin resultados"
 
-#: ../komikku/explorer.py:683
+#: ../komikku/explorer.py:684
 msgid "Servers"
 msgstr "Servidores"
 
-#: ../komikku/explorer.py:712
+#: ../komikku/explorer.py:713
 msgid "Add to library"
 msgstr "Añadir a la biblioteca"
 
@@ -2068,7 +2069,7 @@ msgstr "Biblioteca"
 msgid "Uncategorized"
 msgstr "Sin categoría"
 
-#: ../komikku/library.py:744 ../komikku/servers/multi/manga_stream.py:51
+#: ../komikku/library.py:744 ../komikku/servers/multi/manga_stream.py:55
 msgid "All"
 msgstr "Todo"
 
@@ -2163,8 +2164,8 @@ msgid ""
 "No keyring backends were found to store credential. Use plaintext storage as "
 "fallback."
 msgstr ""
-"No se han encontrado soportes de claves para almacenar las credenciales. "
-"Utilice el almacenamiento de texto plano como alternativa."
+"No se han encontrado soportes de claves para almacenar las credenciales. Use "
+"el almacenamiento de texto plano como alternativa."
 
 #: ../komikku/preferences.py:427
 msgid ""
@@ -2172,7 +2173,7 @@ msgid ""
 "be used as fallback."
 msgstr ""
 "No se han encontrado soportes de claves para almacenar las credenciales. Se "
-"utilizará el almacenamiento de texto plano como alternativa."
+"usará el almacenamiento de texto plano como alternativa."
 
 #: ../komikku/preferences.py:430
 msgid "Test"
@@ -2321,27 +2322,27 @@ msgstr "Erótico"
 msgid "Pornographic"
 msgstr "Pornográfico"
 
-#: ../komikku/servers/multi/manga_stream.py:46
+#: ../komikku/servers/multi/manga_stream.py:50
 msgid "Type"
 msgstr "Tipo"
 
-#: ../komikku/servers/multi/manga_stream.py:47
+#: ../komikku/servers/multi/manga_stream.py:51
 msgid "Type of comics to search for"
 msgstr "Tipo de cómics a buscar"
 
-#: ../komikku/servers/multi/manga_stream.py:52
+#: ../komikku/servers/multi/manga_stream.py:56
 msgid "Manga"
 msgstr "Manga"
 
-#: ../komikku/servers/multi/manga_stream.py:53
+#: ../komikku/servers/multi/manga_stream.py:57
 msgid "Manhwa"
 msgstr "Manhwa"
 
-#: ../komikku/servers/multi/manga_stream.py:54
+#: ../komikku/servers/multi/manga_stream.py:58
 msgid "Manhua"
 msgstr "Manhua"
 
-#: ../komikku/servers/multi/manga_stream.py:55
+#: ../komikku/servers/multi/manga_stream.py:59
 msgid "Comic"
 msgstr "Cómic"
 
