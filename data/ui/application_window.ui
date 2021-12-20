@@ -641,7 +641,7 @@
                               <object class="GtkLabel">
                                 <property name="visible">True</property>
                                 <property name="can-focus">False</property>
-                                <property name="label" comments="The umbrella sentence of the application on the first start screen">Welcome to Komikku</property>
+                                <property name="label" translatable="yes" comments="The umbrella sentence of the application on the first start screen">Welcome to Komikku</property>
                                 <attributes>
                                   <attribute name="weight" value="bold"/>
                                   <attribute name="size" value="21000"/>
