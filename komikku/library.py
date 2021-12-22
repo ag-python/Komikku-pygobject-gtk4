@@ -278,18 +278,20 @@ class Library:
         self.categories_list.enter_edit_mode()
 
     def enter_selection_mode(self, x=None, y=None, selected_thumbnail=None):
-        # Hide search button: disable search
-        self.window.right_button_stack.hide()
-
-        self.selection_mode = True
-
-        self.flowbox.set_selection_mode(Gtk.SelectionMode.MULTIPLE)
-
         if selected_thumbnail is None:
             if x is not None and y is not None:
                 selected_thumbnail = self.flowbox.get_child_at_pos(x, y)
             else:
                 selected_thumbnail = self.flowbox.get_child_at_index(0)
+
+        if selected_thumbnail is None:
+            return
+
+        # Hide search button: disable search
+        self.window.right_button_stack.hide()
+
+        self.flowbox.set_selection_mode(Gtk.SelectionMode.MULTIPLE)
+        self.selection_mode = True
 
         self.flowbox.select_child(selected_thumbnail)
         selected_thumbnail._selected = True
