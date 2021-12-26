@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: Komikku 0.19.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-21 00:13+0100\n"
-"PO-Revision-Date: 2021-10-07 10:33+0200\n"
+"PO-Revision-Date: 2021-12-26 14:15+0100\n"
 "Last-Translator: Liliana Prikler <liliana.prikler@gmail.com>\n"
 "Language-Team: \n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Gtranslator 3.36.0\n"
+"X-Generator: Gtranslator 40.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:10
@@ -67,7 +67,7 @@ msgstr "Automatisches Herunterladen neuer Kapitel"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:22
 msgid "Reading history"
-msgstr ""
+msgstr "Zuletzt gelesen"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:23
 msgid "Light and dark themes"
@@ -81,43 +81,43 @@ msgstr ""
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:90
 msgid "[Card] Add keyboard navigation outside of selection mode"
-msgstr ""
+msgstr "[Mangakarte] Tastennavigation außerhalb des Auswahlmodus hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:91
 msgid "[Servers] CatManga: Disable"
-msgstr ""
+msgstr "[Server] CatManga: Deaktiviert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:92
 msgid "[Servers] ReaperScansFR: Disable"
-msgstr ""
+msgstr "[Server] ReaperScansFR: Deaktiviert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:93
 msgid "[Servers] 24hRomance: Update"
-msgstr ""
+msgstr "[Server] 24hRomance: Aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:94
 msgid "[Servers] Asura Scans [EN/TR]: Update"
-msgstr ""
+msgstr "[Server] Asura Scans (EN/TR): Aktualisert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:95
 msgid "[Servers] Colored Manga (Colored Council): Update"
-msgstr ""
+msgstr "[Server] Colored Manga (Colored Council): Aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:96
 msgid "[Servers] Lelscan-VF: Disable"
-msgstr ""
+msgstr "[Server] Lelscan-VF: Deaktiviert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:97
 msgid "[Servers] Phoenix Fansub [ES]: Update"
-msgstr ""
+msgstr "[Server] Phoenix Fansub (ES): Aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:98
 msgid "[Servers] Raw Manga [JA]: Update"
-msgstr ""
+msgstr "[Server] Raw Manga (JA): Aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:99
 msgid "[Servers] Rawkuma [JA]: Update"
-msgstr ""
+msgstr "[Server] Rawkuma (JA): Aktalisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:100
 #: ../data/info.febvre.Komikku.appdata.xml.in:365
@@ -126,19 +126,19 @@ msgstr "[Server] Submanga: Aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:101
 msgid "[L10n] Update Spanish translation"
-msgstr ""
+msgstr "[L10n] Spanische Übersetzung aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:108
 msgid "[Library] Faster rendering on category changes"
-msgstr ""
+msgstr "[Bibliothek] Schnelleres Rendern bei Kategorieänderung"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:109
 msgid "[Servers] Argos Scan: Disable"
-msgstr ""
+msgstr "[Server] Argos Scan: Deaktiviert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:110
 msgid "[Servers] Bilibili: Detection of partially loaded pages"
-msgstr ""
+msgstr "[Server] Bilibili: Erkenne nur teilweise geladene Seiten"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:111
 #: ../data/info.febvre.Komikku.appdata.xml.in:206
@@ -149,7 +149,7 @@ msgstr "[Server] MangaDex: Aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:112
 msgid "[Servers] Phoenix Fansub: Update"
-msgstr ""
+msgstr "[Server] Phoenix Fansub: Aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:113
 #: ../data/info.febvre.Komikku.appdata.xml.in:135
@@ -162,39 +162,39 @@ msgstr "[Server] Read Manga: Aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:120
 msgid "[Servers] MangaDex: Search now takes language into account"
-msgstr ""
+msgstr "[Server] Mangadex respektiert nun Spracheinstellung"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:121
 msgid "[Servers] Under Flatpak, fixed problem with the HTML parser"
-msgstr ""
+msgstr "[Server] Problem beim HTML-Parser in Flatpak behoben."
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:128
 msgid "Add Reading History"
-msgstr ""
+msgstr "\"Zuletzt gelesen\" hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:129
 msgid "[Servers] Add Le Cercle du Scan [FR]"
-msgstr ""
+msgstr "[Server] Le Cercle du Scan (FR) hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:130
 msgid "[Servers] Add Raw Manga [JA]"
-msgstr ""
+msgstr "[Server] Raw Manga (JA) hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:131
 msgid "[Servers] Add Rawkuma [JA]"
-msgstr ""
+msgstr "[Server] Rawkuma (JA) hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:132
 msgid "[Servers] Add Reaper Scans [FR/PT]"
-msgstr ""
+msgstr "[Server] Reaper Scans (FR/PT) hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:133
 msgid "[Servers] MangaDex: Add rating filter"
-msgstr ""
+msgstr "[Server] MangaDex: Filterung nach Inhalt hinzugefügt"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:134
 msgid "[Servers] AllHentai: Update"
-msgstr ""
+msgstr "[Server] AllHentai: Aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:136
 #: ../data/info.febvre.Komikku.appdata.xml.in:242
@@ -208,7 +208,7 @@ msgstr "[Server] Reaper Scans: Aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:138
 msgid "[Servers] Scan FR: Update"
-msgstr ""
+msgstr "[Server] Scan FR: Aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:139
 #: ../data/info.febvre.Komikku.appdata.xml.in:336
@@ -217,19 +217,19 @@ msgstr "[Server] Scan Manga: Aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:140
 msgid "[Servers] Aloalivn: Disable"
-msgstr ""
+msgstr "[Server] Aloalivn: Deaktiviert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:141
 msgid "[Servers] Central de Mangás: Disable"
-msgstr ""
+msgstr "[Server] Central de Mangás: Deaktiviert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:142
 msgid "[Servers] TuttoAnimeManga: Disable"
-msgstr ""
+msgstr "[Server] TuttoAnimeManga: Deaktiviert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:143
 msgid "[L10n] Update French, German and Polish translations"
-msgstr ""
+msgstr "[L10] Französische, deutsche, und polnische Übersetzung aktualisiert"
 
 #: ../data/info.febvre.Komikku.appdata.xml.in:150
 msgid "[Servers] MANGA Plus by SHUEISHA: Update"
@@ -1537,7 +1537,7 @@ msgstr "Im Browser öffnen"
 #. The umbrella sentence of the application on the first start screen
 #: ../data/ui/application_window.ui:644
 msgid "Welcome to Komikku"
-msgstr ""
+msgstr "Willkommen"
 
 #: ../data/ui/application_window.ui:658
 msgid "Discover new readings"
