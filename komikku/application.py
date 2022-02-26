@@ -263,6 +263,7 @@ class ApplicationWindow(Handy.ApplicationWindow):
         self.application.set_accels_for_action('app.select-all', ['<Control>a'])
         self.application.set_accels_for_action('app.preferences', ['<Control>p'])
         self.application.set_accels_for_action('app.shortcuts', ['<Control>question'])
+        self.application.set_accels_for_action('app.quit', ['<Control>q'])
 
         self.reader.add_accelerators()
 
@@ -294,6 +295,10 @@ class ApplicationWindow(Handy.ApplicationWindow):
         shortcuts_action = Gio.SimpleAction.new('shortcuts', None)
         shortcuts_action.connect('activate', self.on_shortcuts_menu_clicked)
         self.application.add_action(shortcuts_action)
+
+        quit_action = Gio.SimpleAction.new('quit', None)
+        quit_action.connect('activate', self.on_quit_action)
+        self.application.add_action(quit_action)
 
         self.library.add_actions()
         self.card.add_actions()
@@ -438,6 +443,9 @@ class ApplicationWindow(Handy.ApplicationWindow):
             about_dialog.hide()
 
     def on_application_quit(self, window, event):
+        self.on_quit_action()
+
+    def on_quit_action(self, action=None, param=None):
         def do_quit():
             self.save_window_size()
             backup_db()
