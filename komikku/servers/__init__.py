@@ -45,6 +45,7 @@ LANGUAGES = dict(
     pt='Português',
     pt_BR='Português (Brasil)',
     ru='Русский',
+    ua='Українська',
     vi='Tiếng Việt',
     tr='Türkçe',
     ja='日本語',
