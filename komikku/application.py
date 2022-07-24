@@ -61,7 +61,7 @@ CREDITS = dict(
         'Mariusz Kurek (Polish)',
         'Liliana Prikler (German)',
         'Heimen Stoffels (Dutch)',
-        'Irénée Thirion (French)'
+        'Irénée Thirion (French)',
         'Mek101 (Italian)',
         'VaGNaroK (Brazilian Portuguese)',
     ),
