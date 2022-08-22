@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Copyright (C) 2019-2021 Valéry Febvre
+# Copyright (C) 2019-2022 Valéry Febvre
 # SPDX-License-Identifier: GPL-3.0-only or GPL-3.0-or-later
 # Author: Valéry Febvre <vfebvre@easter-eggs.com>
 
@@ -30,7 +30,7 @@ class Japscan(Server):
     lang = 'fr'
     long_strip_genres = ['Webtoon', ]
 
-    base_url = 'https://www.japscan.ws'
+    base_url = 'https://www.japscan.me'
     search_url = base_url + '/manga/'
     api_search_url = base_url + '/live-search/'
     manga_url = base_url + '/manga/{0}/'
