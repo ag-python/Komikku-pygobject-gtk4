@@ -84,6 +84,25 @@
 
     <launchable type="desktop-id">info.febvre.Komikku.desktop</launchable>
     <releases>
+        <release version="0.41.0" date="2022-09-01">
+            <description>
+                <ul>
+                    <li>[Servers] Add Aralos BD [FR]</li>
+                    <li>[Servers] Add Manga-Scantrad [FR]</li>
+                    <li>[Servers] Add Mangas Origines [FR]</li>
+                    <li>[Servers] Add Mangaowl [EN]</li>
+                    <li>[Servers] Asura Scans: Update (EN+TR)</li>
+                    <li>[Servers] BILIBILI COMICS: Update</li>
+                    <li>[Servers] JapScan: Update</li>
+                    <li>[Servers] MangaHub: Update</li>
+                    <li>[Servers] Mangas.in: Fix `Most populars` order</li>
+                    <li>[Servers] Phoenix Fansub: Update</li>
+                    <li>[Servers] Rawkuma: Update</li>
+                    <li>[Servers] ReadManhwa: Update</li>
+                    <li>[Servers] Union Mangás: Update</li>
+                </ul>
+            </description>
+        </release>
         <release version="0.40.0" date="2022-07-25">
             <description>
                 <ul>
